@@ -228,7 +228,7 @@
         }
     }
     @media (max-width: 100vh) {
-        button{
+        #addButton{
             margin-top: 30px;
             transform: scale(2);
         }
@@ -285,7 +285,7 @@
         }
         @media (max-width: 100vh) {
             font-size: clamp(30px, 3vw, 60px);
-            margin: 2vh;
+            margin: 3vh;
         }
         input{
             @media (min-width: 100vh) {
