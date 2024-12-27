@@ -274,9 +274,6 @@
     border-bottom-left-radius: 20px;
     border-bottom-right-radius: 20px;
     h2{
-        @media (max-width: 100vh) {
-            margin-bottom: -2vh;
-        }
         font-size: clamp(20px, 2.5vw, 50px);
         text-align: center;
         color: yellow;
@@ -288,7 +285,7 @@
         }
         @media (max-width: 100vh) {
             font-size: clamp(30px, 3vw, 60px);
-            margin: 4vh;
+            margin: 2vh;
         }
         input{
             @media (min-width: 100vh) {
