@@ -1,0 +1,854 @@
+<!DOCTYPE html>
+<link rel="stylesheet" href="star_style.css">
+<head>
+    <link rel="icon" href="https://i.pinimg.com/736x/ea/db/95/eadb95e3503722bf872a070fea5641cb.jpg" type="image/png">
+    <title>STAR WARS: expanded universe</title>
+    <div class="head-container">
+        <div class="image-container">
+            <img src="ss.gif">
+            <h1>STAR WARS</h1>
+            <h2>expanded universe</h2>
+            <div class="nav-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+            <ul class="nav">
+                <li><a href="index.html">Хронология</a></li>
+                <li><a href="test.html">Что почитать?</a></li>
+                <li><a href="allbooks.html">Библиотека</a></li>
+                <li><a href="contacts.html">Жалобы и предложения</a></li>
+            </ul>
+            <script>
+                const navToggle = document.querySelector('.nav-toggle');
+                const nav = document.querySelector('.nav');
+        
+                navToggle.addEventListener('click', () => {
+                    navToggle.classList.toggle('active');
+                    nav.classList.toggle('active');
+                });
+            </script>
+    </div>
+</head>
+<body>
+    <script>
+        let isDrawing = false;
+        let elements = [];
+        
+        document.addEventListener('dblclick', function(e) {
+          isDrawing = !isDrawing; // Переключаем состояние рисования
+          if (isDrawing) {
+            document.addEventListener('mousemove', drawElement);
+          } else {
+            document.removeEventListener('mousemove', drawElement);
+          }
+        });
+        
+        function drawElement(e) {
+          const element = document.createElement('div');
+          element.classList.add('draw-element');
+          element.style.left = e.pageX + 'px';
+          element.style.top = e.pageY + 'px';
+          document.body.appendChild(element);
+          elements.push(element);
+          setTimeout(() => {
+            element.classList.add('fade-out');
+            setTimeout(() => {
+              document.body.removeChild(element);
+          }, 500);
+          }, 3000);
+        }
+    </script>
+    <div class="content">
+        <div class="grid-container" style="background-image: url(images/lineee.svg); background-size: cover; background-position: 0% 25%;">
+            <button onclick="document.location='#sec1'" class="grid-button grid-button-1">
+                <span class="tooltip" id="tip1"></span>
+            </button>
+            <img class="grid-year y1" src="images/y1.png">
+            <button onclick="document.location='#sec2'" class="grid-button grid-button-2">
+                <span class="tooltip" id="tip2"></span>
+            </button>
+            <img class="grid-year y2" src="images/y2.png">
+            <button onclick="document.location='#sec3'" class="grid-button grid-button-3">
+                <span class="tooltip" id="tip3"></span>
+            </button>
+            <img class="grid-year y3" src="images/y3.png">
+            <button onclick="document.location='#sec4'" class="grid-button grid-button-4">
+                <span class="tooltip" id="tip4"></span>
+            </button>
+            <img class="grid-year y4" src="images/y44.png">
+            <button onclick="document.location='#sec5'" class="grid-button grid-button-5">
+                <span class="tooltip" id="tip5"></span>
+            </button>
+            <img class="grid-year y5" src="images/y5.png">
+        </div>
+        <div class="section" id="sec1" style="margin-top: -20vh; padding-top: 20vh;">
+            <h1 class="sticky">Вторая война ситхов</h1>
+            <b><p>«В этой войне — настоящей войне, — сражения идут не между дроидами, боевыми кораблями или легионами солдат. Всё это лишь грубая форма преград, испытаний на нашем жизненном пути. Настоящая война идёт в сердцах всех живых существ, против их собственной природы, война света и тьмы»</p></b>
+            <p>Вторая война ситхов, также известная как Кризис Старой Республики и Война «Звёздной кузницы» — война между Галактической Республикой и Империей ситхов Дарта Ревана, длившаяся с 3959 по 3956 ДБЯ, один из крупнейших конфликтов периода Старых войн ситхов. Рыцарь-джедай Реван был Верховным главнокомандующим Республиканских вооружённых сил во время Мандалорских войн и привёл Республику к победе над мандалорцами, но затем отрёкся от учений джедаев и избрал путь Тёмной стороны; за ним последовали его многочисленные соратники, разочаровавшиеся в Ордене джедаев и Республике после Мандалорских войн. Угроза истинных ситхов, затаившихся в Неизведанных Регионах, побудила Дарта Ревана приступить к строительству собственной галактической Империи, способной устоять перед предстоявшим вторжением. Спасением Республики в видении Ревана могло быть лишь полное её поглощение новообразованной Империей ситхов, и в 3959 ДБЯ силы Дарта Ревана неожиданно вторглись в республиканское пространство.</p>
+            <img class="img-old" src="images/sithwar.jpeg">
+            <p>На начальных этапах войны Дарт Реван одержал ряд ключевых побед, в результате чего положение Республики к 3957 ДБЯ было катастрофическим: армада ситхов захватила Внешнее Кольцо и Центральные Миры и неумолимо приближалась к Корусанту, в то время как Республиканский флот был практически полностью уничтожен. Главную роль в столь стремительном продвижении ситхов сыграла «Звёздная кузница», беспрестанно обеспечивавшая ситхский флот новейшими боевыми кораблями. В отчаянии джедаи в 3957 ДБЯ устроили ловушку для Дарта Ревана, но хотя им и удалось захватить Тёмного повелителя, ближайший сподвижник Ревана Дарт Малак занял его место во главе Империи ситхов, и война приобрела ещё более ожесточённый характер: Малак, в отличие от своего предшественника, стремился не сохранить Республику, а как можно скорее уничтожить её.
+
+                Совет джедаев стёр память Дарта Ревана, заменив её ложными воспоминаниями, а позже начал вновь обучать его в качестве джедая, чтобы тот смог найти таинственное оружие ситхов. Пока Реван путешествовал по галактике в поисках звёздных карт, Малак нанёс сокрушительный удар по Ордену джедаев, напав на Дантуин и уничтожив Анклав джедаев. После обнаружения Реваном Кузницы Республиканский флот сошёлся с флотом ситхов в финальной битве при Раката-Прайм. Реван сразил Малака на борту «Звёздной кузницы», после чего ситхский флот был разгромлен, а сама станция уничтожена. По окончании Гражданской войны джедаев Империя ситхов погрузилась в хаос, а Республика — в глубочайший кризис.</p>
+            <h2 style="color: yellow; margin-left: 2vw;">Где это было?</h2>
+            <div class="no-scroll">
+                <div class="gallery-item">
+                    <img src="books/old1.jpg">
+                    <div class="gallery-item-content">
+                        <div class="gallery-item-title">Роковой альянс, Шон Уильямс</div>
+                    </div>
+                    <div class="gallery-item-overlay">
+                        <h3>Для более подробного ознакомления с книгой</h3>
+                        <form action="bookspg/oldrep.html#section1">
+                        <button class="lngbtn">нажмите сюда</button>
+                    </form>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="books/old2.jpg">
+                    <div class="gallery-item-content">
+                        <div class="gallery-item-title">Обманутые, Пол Кемп</div>
+                    </div>
+                    <div class="gallery-item-overlay">
+                        <h3>Для более подробного ознакомления с книгой</h3>
+                        <form action="bookspg/oldrep.html#section2">
+                        <button class="lngbtn">нажмите сюда</button>
+                    </form>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="books/old3.jpg">
+                    <div class="gallery-item-content">
+                        <div class="gallery-item-title">Реван, Дрю Карпишин</div>
+                    </div>
+                    <div class="gallery-item-overlay">
+                        <h3>Для более подробного ознакомления с книгой</h3>
+                        <form action="bookspg/oldrep.html#section3">
+                        <button class="lngbtn">нажмите сюда</button>
+                    </form>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="books/old4.jpg">
+                    <div class="gallery-item-content">
+                        <div class="gallery-item-title">Истребление, Дрю Карпишин</div>
+                    </div>
+                    <div class="gallery-item-overlay">
+                        <h3>Для более подробного ознакомления с книгой</h3>
+                        <form action="bookspg/oldrep.html#section4">
+                        <button class="lngbtn">нажмите сюда</button>
+                    </form>
+                    </div>
+                </div>
+                </div>
+        </div>
+        <div class="horizontal-scroll">
+            <div class="gallery-item">
+                <img src="books/old1.jpg">
+                <div class="gallery-item-content">
+                    <div class="gallery-item-title">Роковой альянс, Шон Уильямс</div>
+                </div>
+                <div class="gallery-item-overlay">
+                    <h3>Для более подробного ознакомления с книгой</h3>
+                    <form action="bookspg/oldrep.html#section1">
+                    <button class="lngbtn">нажмите сюда</button>
+                </form>
+                </div>
+            </div>
+            <div class="gallery-item">
+                <img src="books/old2.jpg">
+                <div class="gallery-item-content">
+                    <div class="gallery-item-title">Обманутые, Пол Кемп</div>
+                </div>
+                <div class="gallery-item-overlay">
+                    <h3>Для более подробного ознакомления с книгой</h3>
+                    <form action="bookspg/oldrep.html#section2">
+                    <button class="lngbtn">нажмите сюда</button>
+                </form>
+                </div>
+            </div>
+            <div class="gallery-item">
+                <img src="books/old3.jpg">
+                <div class="gallery-item-content">
+                    <div class="gallery-item-title">Реван, Дрю Карпишин</div>
+                </div>
+                <div class="gallery-item-overlay">
+                    <h3>Для более подробного ознакомления с книгой</h3>
+                    <form action="bookspg/oldrep.html#section3">
+                    <button class="lngbtn">нажмите сюда</button>
+                </form>
+                </div>
+            </div>
+            <div class="gallery-item">
+                <img src="books/old4.jpg">
+                <div class="gallery-item-content">
+                    <div class="gallery-item-title">Истребление, Дрю Карпишин</div>
+                </div>
+                <div class="gallery-item-overlay">
+                    <h3>Для более подробного ознакомления с книгой</h3>
+                    <form action="bookspg/oldrep.html#section4">
+                    <button class="lngbtn">нажмите сюда</button>
+                </form>
+                </div>
+            </div>
+        </div>
+        <div class="section" id="sec2">
+            <h1 class="sticky">Появление правила двух и истребление Ордена ситхов</h1>
+            <b><p>«Когда твоя сила затмит мою, мною можно будет пожертвовать. Это Правило двух: один учитель и один ученик. Когда ты будешь готова стать лордом ситхов, тебе придется уничтожить меня»</p></b>
+            <p>Чтобы избежать, казалось бы, неизбежной жажды власти у ситхов, Дарт Бэйн стремился создать новый Орден ситхов, в который входили бы только мастер и ученик.
+
+                Бэйн разработал прототип правила двух после открытия голокрона в Храме древних на Лехоне. Голокрон ситхов принадлежал древнему лорду ситхов — Дарту Ревану, который собрал его во время своего первого пребывания на Лехоне в 3959 ДБЯ. В этом голокроне Реван говорил о недостатке в обучении более одного ученика.</p>
+            <img class="img-imp" src="images/two.jpg">
+            <p>Бэйн понял из голокрона, что в древние времена ученики искали способы уничтожить своих мастеров и присвоить их титулы. Соединяя свои более слабые силы воедино, они могли победить своего сильного мастера. Без мастера достаточно сильного, чтобы удерживать своих учеников, они боролись друг с другом за власть, ради получения которой они объединялись. В конце концов новый мастер-ситх будет слабее старого. Этот процесс будет повторяться, оставляя после себя более слабого, чем предыдущий, мастера.
+
+                Хотя в Ситхской империи Ревана были академии ситхов, которые тренировали множество ситхов, было лишь два истинных лорда ситхов: Дарт Реван и Дарт Малак. Так было и в более древней империи ситхов Экзара Куна и Улика Кель-Дромы, хотя Кун тренировал много учеников одновременно. Поняв философию Дарта Ревана, Бэйн решил прекратить ситхские междоусобицы и преобразовать существующий орден ситхов в новый, в котором будут только учитель и ученик.
+                
+                Бэйн уничтожил старый орден ситхов — Братство Тьмы, обманув лорда Каана и вынудив его использовать ментальную бомбу, которая убила всех членов ордена, кроме Бэйна. Потом Бэйн скрыл от джедаев правило двух.</p>
+            <h2 style="color: yellow; margin-left: 2vw;">Где это было?</h2>
+            <div class="no-scroll">
+                <div class="gallery-item">
+                    <img src="books/bane1.jpg">
+                    <div class="gallery-item-content">
+                        <div class="gallery-item-title">Путь разрушения, Дрю Карпишин</div>
+                    </div>
+                    <div class="gallery-item-overlay">
+                        <h3>Для более подробного ознакомления с книгой</h3>
+                        <form action="bookspg/bane.html#section1">
+                        <button class="lngbtn">нажмите сюда</button>
+                    </form>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="books/bane2.jpg">
+                    <div class="gallery-item-content">
+                        <div class="gallery-item-title">Правило двух, Дрю Карпишин</div>
+                    </div>
+                    <div class="gallery-item-overlay">
+                        <h3>Для более подробного ознакомления с книгой</h3>
+                        <form action="bookspg/bane.html#section2">
+                        <button class="lngbtn">нажмите сюда</button>
+                    </form>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="books/bane3.jpg">
+                    <div class="gallery-item-content">
+                        <div class="gallery-item-title">Династия зла, Дрю Карпишин</div>
+                    </div>
+                    <div class="gallery-item-overlay">
+                        <h3>Для более подробного ознакомления с книгой</h3>
+                        <form action="bookspg/bane.html#section3">
+                        <button class="lngbtn">нажмите сюда</button>
+                    </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="horizontal-scroll">
+            <div class="gallery-item">
+                <img src="books/bane1.jpg">
+                <div class="gallery-item-content">
+                    <div class="gallery-item-title">Путь разрушения, Дрю Карпишин</div>
+                </div>
+                <div class="gallery-item-overlay">
+                    <h3>Для более подробного ознакомления с книгой</h3>
+                    <form action="bookspg/bane.html#section1">
+                    <button class="lngbtn">нажмите сюда</button>
+                </form>
+                </div>
+            </div>
+            <div class="gallery-item">
+                <img src="books/bane2.jpg">
+                <div class="gallery-item-content">
+                    <div class="gallery-item-title">Правило двух, Дрю Карпишин</div>
+                </div>
+                <div class="gallery-item-overlay">
+                    <h3>Для более подробного ознакомления с книгой</h3>
+                    <form action="bookspg/bane.html#section2">
+                    <button class="lngbtn">нажмите сюда</button>
+                </form>
+                </div>
+            </div>
+            <div class="gallery-item">
+                <img src="books/bane3.jpg">
+                <div class="gallery-item-content">
+                    <div class="gallery-item-title">Династия зла, Дрю Карпишин</div>
+                </div>
+                <div class="gallery-item-overlay">
+                    <h3>Для более подробного ознакомления с книгой</h3>
+                    <form action="bookspg/bane.html#section3">
+                    <button class="lngbtn">нажмите сюда</button>
+                </form>
+                </div>
+            </div>
+        </div>
+        <div class="section" id="sec3">
+            <h1 class="sticky">Битва при Явине</h1>
+            <b><p>«Любая атака на станцию, предпринятая мятежниками, будет самоубийством, бесполезным жестом отчаяния»</p></b>
+            <p>Битва при Явине  — крупная битва Галактической гражданской войны, приведшая к уничтожению первой «Звезды Смерти». Она стала настолько знаковым событием в борьбе с Империей, что в последствии Новая Республика при создании стандартного галактического календаря примет ее за начало нового летоисчисления.</p>
+            <img class="img-old" src="images/yavin.jpg">
+            <p>В результате этой битвы Альянс повстанцев обрел доверие как достойный оппонент Империи. В период после уничтожения «Звезды Смерти» и до роспуска Имперского Сената тысячи звездных систем открыто поддержали Альянс. Вследствие этого Империя начала оккупацию миров, ранее оставленные нетронутыми, что привело к эскалации конфликта.</p>
+            <p>Пару месяцев спустя после Битвы у Явина Империя предприняла несколько коротких атак на спутник Явина, пытаясь уничтожить ядро Восстания. Эти атаки осуществлялись небольшими эскадрильями TIE-истребителей, вылетавших с небольшой базы в системе Явин. Они обычно выполняли патрульные миссии, а не наносили ответные удары. Альянс повстанцев был вынужден эвакуироваться с Явина, опасаясь нападения имперского флота, и в конце концов обосновался на Хоте. Последний рейд Империи стал массированным штурмом, включавшим блокаду планеты и высадку крупных наземных сил при поддержке TIE-истребителей и AT-ST. Генерал Додонна, возглавлявший оборону Явина, не смог спастись, был захвачен имперскими войсками и позднее заключен в тюрьму.</p>
+        </div>
+        <div class="section" id="sec4" style="margin-top: -20vh; padding-top: 20vh;">
+            <h1 class="sticky">Кампания Трауна</h1>
+            <b><p>«История приходит в движение, капитан. Те, кто не могут идти с ней в ногу, останется далеко позади. Их удел — наблюдать издалека. Тот, кто встанет у нас на пути, смотреть не будут совсем»</p></b>
+            <img class="img-imp" src="images/thrawn.webp">
+            <p>Кампания Трауна, также известная как кризис Трауна, была рядом новаторских военных и политических маневров, выполненных имперским гранд-адмиралом Трауном в 9 ПБЯ. Эта кампания стала первым полномасштабным наступлением Империи со времён битвы при Эндоре. Атаки, отвлекающие маневры и политика Трауна создали первый основной внутренний и внешний конфликт для Новой Республики, и чиссу почти удалось уничтожить молодое государство.</p>
+            <p>Траун уже тогда начал разрабатывать великую стратегию, чтобы победить Новую Республику и восстановить имперскую власть. Хотя многие детали этой стратегии были неясны, известно лишь, что она включала подробную кампанию на ближайшие пять лет, и что гранд-адмирал считал, что его силы в Неизведанных Регионах могли стать ключевыми для окончательной победы Империи. Эта стратегия учитывала политические балансы и факторы, культурные и психологические недочёты и сильные места, исторические свары и вражду между народами, которые можно было использовать вне зависимости от времени. В течение всего шести месяцев с момента начала своей кампании Траун распространил власть Империи на половину известной Галактики, удвоив площадь имперских владений и выявив существенные слабости Новой Республики. Гений и харизма Трауна были единственными реальными преимуществами Империи. Без них Империя скоро вновь начала распадаться, только гранд-адмиралу удалось собрать осколки в единое целое.</p>
+            <h2 style="color: yellow; margin-left: 2vw;">Где это было?</h2>
+            <div class="no-scroll">
+                <div class="gallery-item">
+                    <img src="books/hier.jpg">
+                    <div class="gallery-item-content">
+                        <div class="gallery-item-title">Наследник Империи, Тимоти Зан</div>
+                    </div>
+                    <div class="gallery-item-overlay">
+                        <h3>Для более подробного ознакомления с книгой</h3>
+                        <form action="bookspg/hier.html#section1">
+                        <button class="lngbtn">нажмите сюда</button>
+                    </form>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="books/dark.jpg">
+                    <div class="gallery-item-content">
+                        <div class="gallery-item-title">Возрождение тьмы, Тимоти Зан</div>
+                    </div>
+                    <div class="gallery-item-overlay">
+                        <h3>Для более подробного ознакомления с книгой</h3>
+                        <form action="bookspg/hier.html#section2">
+                        <button class="lngbtn">нажмите сюда</button>
+                    </form>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="books/lastorder.jpg">
+                    <div class="gallery-item-content">
+                        <div class="gallery-item-title">Последний приказ, Тимоти Зан</div>
+                    </div>
+                    <div class="gallery-item-overlay">
+                        <h3>Для более подробного ознакомления с книгой</h3>
+                        <form action="bookspg/hier.html#section3">
+                        <button class="lngbtn">нажмите сюда</button>
+                    </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="horizontal-scroll">
+            <div class="gallery-item">
+                <img src="books/hier.jpg">
+                <div class="gallery-item-content">
+                    <div class="gallery-item-title">Наследник Империи, Тимоти Зан</div>
+                </div>
+                <div class="gallery-item-overlay">
+                    <h3>Для более подробного ознакомления с книгой</h3>
+                    <form action="bookspg/hier.html#section1">
+                    <button class="lngbtn">нажмите сюда</button>
+                </form>
+                </div>
+            </div>
+            <div class="gallery-item">
+                <img src="books/dark.jpg">
+                <div class="gallery-item-content">
+                    <div class="gallery-item-title">Возрождение тьмы, Тимоти Зан</div>
+                </div>
+                <div class="gallery-item-overlay">
+                    <h3>Для более подробного ознакомления с книгой</h3>
+                    <form action="bookspg/hier.html#section2">
+                    <button class="lngbtn">нажмите сюда</button>
+                </form>
+                </div>
+            </div>
+            <div class="gallery-item">
+                <img src="books/lastorder.jpg">
+                <div class="gallery-item-content">
+                    <div class="gallery-item-title">Последний приказ, Тимоти Зан</div>
+                </div>
+                <div class="gallery-item-overlay">
+                    <h3>Для более подробного ознакомления с книгой</h3>
+                    <form action="bookspg/hier.html#section3">
+                    <button class="lngbtn">нажмите сюда</button>
+                </form>
+                </div>
+            </div>
+        </div>
+        <div class="section" id="sec5">
+            <h1 class="sticky">Юужань-вонгская война</h1>
+            <b><p>«Я участвовал в худшей из всех войн и был свидетелем искупления зла. Я видел, как в Силе восстановился баланс. Но порядок может превратиться в хаос… как это было, когда я родился. Теперь, с моими близкими и моими верными союзниками, я столкнулся с новой угрозой, не похожей ни на одну из предыдущих. И я не уверен, что на этот раз мы сможем победить»</p></b>
+            <p>Юужань-вонгская война, также известная как Великая война, — общегалактический конфликт, который возник, когда юужань-вонги, воинственная раса, уже давно покинувшая свою собственную разрушенную галактику, вторглись во Внешнее Кольцо.</p>
+            <img class="img-old" src="images/vong.jpg">
+            <p>Плохо подготовленное и неэффективное правительство главы государства Борска Фей'лии было неспособно помешать юужань-вонгам неумолимо двигаться к Центру. Корусант, галактическая столица, была захвачена и подвергнута терраформированию спустя два года после начала вторжения. К этому времени бесчисленные расы оказались на грани вымирания, и целые планеты стали непригодны для проживания.
+                
+                <br>Использовавшие передовые биотехнологии во всех областях жизни, юужань-вонги были мастерами адаптации и уловок, так же как грубой силы и тактики террора. Вера, что вторжение было предопределено богами и что эта Галактика принадлежала им по праву, была подкреплена верховным повелителем Шимррой Джамаане и кастой жрецов, посредниками между юужань-вонгами и богами. Таким образом, эта раса напала с ожесточением, но их вторжение, руководимое мастером войны Цавонгом Ла, перенапрягло себя. Вендетта против Нового Ордена джедаев Люка Скайуокера, движение еретиков, популярное среди низших каст, а также слухи, что их давно уничтоженный родной мир появился в Неизведанных Регионах, были лишь некоторыми из факторов, которые вызвали кризис Юужань-вонгской империи. Вскоре после стремительного наступления между Новой Республикой и юужань-вонгами возник технологический паритет. Как только Новая Республика оправилась от потери своей столицы, юужань-вонги потерпели сокрушительное поражение на Эбаке-9.
+                
+                <br>Охваченная внутренней напряженностью, Юужань-вонгская империя была ещё в состоянии нейтрализовать многие из угроз, стоявших перед ней, в том числе йевет и сси-руук, прежде чем снова перейти в наступление. Новая Республика, реформированная альдераанским главой государства Кэлом Омасом в Галактическую Федерацию Свободных Альянсов, была доведена до грани поражения. Тогда в ответ на новое вонгское наступление на свою временную столицу на Даке Галактический Альянс перешёл к роковому распространению «Альфы-Красной», болезнетворного микроорганизма, губительного для юужань-вонгов. Это опасный конец войны был предотвращён Зонамой-Секот, семенем потерянного родного мира юужань-вонгов, появившейся над Корусантом, чьё прибытие ускорило заключительное сражение конфликта. Скайуокер и другие ведущие джедаи, которые находились на Зонаме-Секот и убедили её вернуться, во время битвы победили Шимрру Джамаане и настоящего главу юужань-вонгов — Оними, в то время как флоты боевых кораблей столкнулись ещё раз в космосе. Юужань-вонгская война закончилась гибелью верховного повелителя и капитуляцией армады мастера войны Нас Чоки. Секотские соглашения, установленные при этом, предусматривали разоружение и амнистию для юужань-вонгов и оказались крайне непопулярными. И юужань-вонги, и последствия их разрушительной войны сыграли важную роль в последующих событиях.</p>
+            <h2 style="color: yellow; margin-left: 2vw;">Где это было?</h2>
+            <div class="no-scroll">
+                <div class="gallery-item">
+                    <img src="books/nod1.jpg">
+                    <div class="gallery-item-content">
+                        <div class="gallery-item-title">Вектор-прайм, Роберт Сальваторе</div>
+                    </div>
+                    <div class="gallery-item-overlay">
+                        <h3>Для более подробного ознакомления с книгой</h3>
+                        <form action="bookspg/nod.html#section1">
+                        <button class="lngbtn">нажмите сюда</button>
+                    </form>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="books/nod2.jpg">
+                    <div class="gallery-item-content">
+                        <div class="gallery-item-title">Темный прилив 1: натиск, Майкл Стэкпол</div>
+                    </div>
+                    <div class="gallery-item-overlay">
+                        <h3>Для более подробного ознакомления с книгой</h3>
+                        <form action="bookspg/nod.html#section2">
+                        <button class="lngbtn">нажмите сюда</button>
+                    </form>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="books/nod3.jpg">
+                    <div class="gallery-item-content">
+                        <div class="gallery-item-title">Темный прилив 2: руины, Майкл Стэкпол</div>
+                    </div>
+                    <div class="gallery-item-overlay">
+                        <h3>Для более подробного ознакомления с книгой</h3>
+                        <form action="bookspg/nod.html#section3">
+                        <button class="lngbtn">нажмите сюда</button>
+                    </form>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="books/nod4.jpg">
+                    <div class="gallery-item-content">
+                        <div class="gallery-item-title">Посланники хаоса 1: проверка на прочность, Джеймс Лусено</div>
+                    </div>
+                    <div class="gallery-item-overlay">
+                        <h3>Для более подробного ознакомления с книгой</h3>
+                        <form action="bookspg/nod.html#section4">
+                        <button class="lngbtn">нажмите сюда</button>
+                    </form>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="books/nod5.jpg">
+                    <div class="gallery-item-content">
+                        <div class="gallery-item-title">Посланники хаоса 2: сумерки джедаев, Джеймс Лусено</div>
+                    </div>
+                    <div class="gallery-item-overlay">
+                        <h3>Для более подробного ознакомления с книгой</h3>
+                        <form action="bookspg/nod.html#section5">
+                        <button class="lngbtn">нажмите сюда</button>
+                    </form>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="books/nod6.jpg">
+                    <div class="gallery-item-content">
+                        <div class="gallery-item-title">Точка равновесия, Кэти Тайерс</div>
+                    </div>
+                    <div class="gallery-item-overlay">
+                        <h3>Для более подробного ознакомления с книгой</h3>
+                        <form action="bookspg/nod.html#section6">
+                        <button class="lngbtn">нажмите сюда</button>
+                    </form>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="books/nod7.jpg">
+                    <div class="gallery-item-content">
+                        <div class="gallery-item-title">На грани победы 1: завоевание, Грегори Киз</div>
+                    </div>
+                    <div class="gallery-item-overlay">
+                        <h3>Для более подробного ознакомления с книгой</h3>
+                        <form action="bookspg/nod.html#section7">
+                        <button class="lngbtn">нажмите сюда</button>
+                    </form>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="books/nod8.jpg">
+                    <div class="gallery-item-content">
+                        <div class="gallery-item-title">На грани победы 2: возрождение, Грегори Киз</div>
+                    </div>
+                    <div class="gallery-item-overlay">
+                        <h3>Для более подробного ознакомления с книгой</h3>
+                        <form action="bookspg/nod.html#section8">
+                        <button class="lngbtn">нажмите сюда</button>
+                    </form>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="books/nod9.jpg">
+                    <div class="gallery-item-content">
+                        <div class="gallery-item-title">Звезда за звездой, Трой Деннинг</div>
+                    </div>
+                    <div class="gallery-item-overlay">
+                        <h3>Для более подробного ознакомления с книгой</h3>
+                        <form action="bookspg/nod.html#section9">
+                        <button class="lngbtn">нажмите сюда</button>
+                    </form>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="books/nod10.jpg">
+                    <div class="gallery-item-content">
+                        <div class="gallery-item-title">Путешествие во тьму, Элейн Каннингем</div>
+                    </div>
+                    <div class="gallery-item-overlay">
+                        <h3>Для более подробного ознакомления с книгой</h3>
+                        <form action="bookspg/nod.html#section10">
+                        <button class="lngbtn">нажмите сюда</button>
+                    </form>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="books/nod11.jpg">
+                    <div class="gallery-item-content">
+                        <div class="gallery-item-title">В тылу врага 1: мятежная мечта, Аарон Оллстон</div>
+                    </div>
+                    <div class="gallery-item-overlay">
+                        <h3>Для более подробного ознакомления с книгой</h3>
+                        <form action="bookspg/nod.html#section11">
+                        <button class="lngbtn">нажмите сюда</button>
+                    </form>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="books/nod12.jpg">
+                    <div class="gallery-item-content">
+                        <div class="gallery-item-title">В тылу врага 2: мятежная стойкость, Аарон Оллстон</div>
+                    </div>
+                    <div class="gallery-item-overlay">
+                        <h3>Для более подробного ознакомления с книгой</h3>
+                        <form action="bookspg/nod.html#section12">
+                        <button class="lngbtn">нажмите сюда</button>
+                    </form>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="books/nod13.jpg">
+                    <div class="gallery-item-content">
+                        <div class="gallery-item-title">Изменник, Мэттью Стовер</div>
+                    </div>
+                    <div class="gallery-item-overlay">
+                        <h3>Для более подробного ознакомления с книгой</h3>
+                        <form action="bookspg/nod.html#section13">
+                        <button class="lngbtn">нажмите сюда</button>
+                    </form>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="books/nod14.jpg">
+                    <div class="gallery-item-content">
+                        <div class="gallery-item-title">Путь судьбы, Уолтер Уильямс</div>
+                    </div>
+                    <div class="gallery-item-overlay">
+                        <h3>Для более подробного ознакомления с книгой</h3>
+                        <form action="bookspg/nod.html#section14">
+                        <button class="lngbtn">нажмите сюда</button>
+                    </form>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="books/nod15.jpg">
+                    <div class="gallery-item-content">
+                        <div class="gallery-item-title">Еретик Силы 1: обломки, Шон Уильямс и Шейн Дикс</div>
+                    </div>
+                    <div class="gallery-item-overlay">
+                        <h3>Для более подробного ознакомления с книгой</h3>
+                        <form action="bookspg/nod.html#section15">
+                        <button class="lngbtn">нажмите сюда</button>
+                    </form>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="books/nod16.jpg">
+                    <div class="gallery-item-content">
+                        <div class="gallery-item-title">Еретик Силы 2: обездоленные, Шон Уильямс и Шейн Дикс</div>
+                    </div>
+                    <div class="gallery-item-overlay">
+                        <h3>Для более подробного ознакомления с книгой</h3>
+                        <form action="bookspg/nod.html#section16">
+                        <button class="lngbtn">нажмите сюда</button>
+                    </form>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="books/nod17.jpg">
+                    <div class="gallery-item-content">
+                        <div class="gallery-item-title">Еретик Силы 3: объединение, Шон Уильямс и Шейн Дикс</div>
+                    </div>
+                    <div class="gallery-item-overlay">
+                        <h3>Для более подробного ознакомления с книгой</h3>
+                        <form action="bookspg/nod.html#section17">
+                        <button class="lngbtn">нажмите сюда</button>
+                    </form>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="books/nod18.jpg">
+                    <div class="gallery-item-content">
+                        <div class="gallery-item-title">Последнее пророчество, Грегори Киз</div>
+                    </div>
+                    <div class="gallery-item-overlay">
+                        <h3>Для более подробного ознакомления с книгой</h3>
+                        <form action="bookspg/nod.html#section18">
+                        <button class="lngbtn">нажмите сюда</button>
+                    </form>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="books/nod19.jpg">
+                    <div class="gallery-item-content">
+                        <div class="gallery-item-title">Единая Сила, Джеймс Лусено</div>
+                    </div>
+                    <div class="gallery-item-overlay">
+                        <h3>Для более подробного ознакомления с книгой</h3>
+                        <form action="bookspg/nod.html#section19">
+                        <button class="lngbtn">нажмите сюда</button>
+                    </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+        <div class="horizontal-scroll">
+            <div class="gallery-item">
+                <img src="books/nod1.jpg">
+                <div class="gallery-item-content">
+                    <div class="gallery-item-title">Вектор-прайм, Роберт Сальваторе</div>
+                </div>
+                <div class="gallery-item-overlay">
+                    <h3>Для более подробного ознакомления с книгой</h3>
+                    <form action="bookspg/nod.html#section1">
+                    <button class="lngbtn">нажмите сюда</button>
+                </form>
+                </div>
+            </div>
+            <div class="gallery-item">
+                <img src="books/nod2.jpg">
+                <div class="gallery-item-content">
+                    <div class="gallery-item-title">Темный прилив 1: натиск, Майкл Стэкпол</div>
+                </div>
+                <div class="gallery-item-overlay">
+                    <h3>Для более подробного ознакомления с книгой</h3>
+                    <form action="bookspg/nod.html#section2">
+                    <button class="lngbtn">нажмите сюда</button>
+                </form>
+                </div>
+            </div>
+            <div class="gallery-item">
+                <img src="books/nod3.jpg">
+                <div class="gallery-item-content">
+                    <div class="gallery-item-title">Темный прилив 2: руины, Майкл Стэкпол</div>
+                </div>
+                <div class="gallery-item-overlay">
+                    <h3>Для более подробного ознакомления с книгой</h3>
+                    <form action="bookspg/nod.html#section3">
+                    <button class="lngbtn">нажмите сюда</button>
+                </form>
+                </div>
+            </div>
+            <div class="gallery-item">
+                <img src="books/nod4.jpg">
+                <div class="gallery-item-content">
+                    <div class="gallery-item-title">Посланники хаоса 1: проверка на прочность, Джеймс Лусено</div>
+                </div>
+                <div class="gallery-item-overlay">
+                    <h3>Для более подробного ознакомления с книгой</h3>
+                    <form action="bookspg/nod.html#section4">
+                    <button class="lngbtn">нажмите сюда</button>
+                </form>
+                </div>
+            </div>
+            <div class="gallery-item">
+                <img src="books/nod5.jpg">
+                <div class="gallery-item-content">
+                    <div class="gallery-item-title">Посланники хаоса 2: сумерки джедаев, Джеймс Лусено</div>
+                </div>
+                <div class="gallery-item-overlay">
+                    <h3>Для более подробного ознакомления с книгой</h3>
+                    <form action="bookspg/nod.html#section5">
+                    <button class="lngbtn">нажмите сюда</button>
+                </form>
+                </div>
+            </div>
+            <div class="gallery-item">
+                <img src="books/nod6.jpg">
+                <div class="gallery-item-content">
+                    <div class="gallery-item-title">Точка равновесия, Кэти Тайерс</div>
+                </div>
+                <div class="gallery-item-overlay">
+                    <h3>Для более подробного ознакомления с книгой</h3>
+                    <form action="bookspg/nod.html#section6">
+                    <button class="lngbtn">нажмите сюда</button>
+                </form>
+                </div>
+            </div>
+            <div class="gallery-item">
+                <img src="books/nod7.jpg">
+                <div class="gallery-item-content">
+                    <div class="gallery-item-title">На грани победы 1: завоевание, Грегори Киз</div>
+                </div>
+                <div class="gallery-item-overlay">
+                    <h3>Для более подробного ознакомления с книгой</h3>
+                    <form action="bookspg/nod.html#section7">
+                    <button class="lngbtn">нажмите сюда</button>
+                </form>
+                </div>
+            </div>
+            <div class="gallery-item">
+                <img src="books/nod8.jpg">
+                <div class="gallery-item-content">
+                    <div class="gallery-item-title">На грани победы 2: возрождение, Грегори Киз</div>
+                </div>
+                <div class="gallery-item-overlay">
+                    <h3>Для более подробного ознакомления с книгой</h3>
+                    <form action="bookspg/nod.html#section8">
+                    <button class="lngbtn">нажмите сюда</button>
+                </form>
+                </div>
+            </div>
+            <div class="gallery-item">
+                <img src="books/nod9.jpg">
+                <div class="gallery-item-content">
+                    <div class="gallery-item-title">Звезда за звездой, Трой Деннинг</div>
+                </div>
+                <div class="gallery-item-overlay">
+                    <h3>Для более подробного ознакомления с книгой</h3>
+                    <form action="bookspg/nod.html#section9">
+                    <button class="lngbtn">нажмите сюда</button>
+                </form>
+                </div>
+            </div>
+            <div class="gallery-item">
+                <img src="books/nod10.jpg">
+                <div class="gallery-item-content">
+                    <div class="gallery-item-title">Путешествие во тьму, Элейн Каннингем</div>
+                </div>
+                <div class="gallery-item-overlay">
+                    <h3>Для более подробного ознакомления с книгой</h3>
+                    <form action="bookspg/nod.html#section10">
+                    <button class="lngbtn">нажмите сюда</button>
+                </form>
+                </div>
+            </div>
+            <div class="gallery-item">
+                <img src="books/nod11.jpg">
+                <div class="gallery-item-content">
+                    <div class="gallery-item-title">В тылу врага 1: мятежная мечта, Аарон Оллстон</div>
+                </div>
+                <div class="gallery-item-overlay">
+                    <h3>Для более подробного ознакомления с книгой</h3>
+                    <form action="bookspg/nod.html#section11">
+                    <button class="lngbtn">нажмите сюда</button>
+                </form>
+                </div>
+            </div>
+            <div class="gallery-item">
+                <img src="books/nod12.jpg">
+                <div class="gallery-item-content">
+                    <div class="gallery-item-title">В тылу врага 2: мятежная стойкость, Аарон Оллстон</div>
+                </div>
+                <div class="gallery-item-overlay">
+                    <h3>Для более подробного ознакомления с книгой</h3>
+                    <form action="bookspg/nod.html#section12">
+                    <button class="lngbtn">нажмите сюда</button>
+                </form>
+                </div>
+            </div>
+            <div class="gallery-item">
+                <img src="books/nod13.jpg">
+                <div class="gallery-item-content">
+                    <div class="gallery-item-title">Изменник, Мэттью Стовер</div>
+                </div>
+                <div class="gallery-item-overlay">
+                    <h3>Для более подробного ознакомления с книгой</h3>
+                    <form action="bookspg/nod.html#section13">
+                    <button class="lngbtn">нажмите сюда</button>
+                </form>
+                </div>
+            </div>
+            <div class="gallery-item">
+                <img src="books/nod14.jpg">
+                <div class="gallery-item-content">
+                    <div class="gallery-item-title">Путь судьбы, Уолтер Уильямс</div>
+                </div>
+                <div class="gallery-item-overlay">
+                    <h3>Для более подробного ознакомления с книгой</h3>
+                    <form action="bookspg/nod.html#section14">
+                    <button class="lngbtn">нажмите сюда</button>
+                </form>
+                </div>
+            </div>
+            <div class="gallery-item">
+                <img src="books/nod15.jpg">
+                <div class="gallery-item-content">
+                    <div class="gallery-item-title">Еретик Силы 1: обломки, Шон Уильямс и Шейн Дикс</div>
+                </div>
+                <div class="gallery-item-overlay">
+                    <h3>Для более подробного ознакомления с книгой</h3>
+                    <form action="bookspg/nod.html#section15">
+                    <button class="lngbtn">нажмите сюда</button>
+                </form>
+                </div>
+            </div>
+            <div class="gallery-item">
+                <img src="books/nod16.jpg">
+                <div class="gallery-item-content">
+                    <div class="gallery-item-title">Еретик Силы 2: обездоленные, Шон Уильямс и Шейн Дикс</div>
+                </div>
+                <div class="gallery-item-overlay">
+                    <h3>Для более подробного ознакомления с книгой</h3>
+                    <form action="bookspg/nod.html#section16">
+                    <button class="lngbtn">нажмите сюда</button>
+                </form>
+                </div>
+            </div>
+            <div class="gallery-item">
+                <img src="books/nod17.jpg">
+                <div class="gallery-item-content">
+                    <div class="gallery-item-title">Еретик Силы 3: объединение, Шон Уильямс и Шейн Дикс</div>
+                </div>
+                <div class="gallery-item-overlay">
+                    <h3>Для более подробного ознакомления с книгой</h3>
+                    <form action="bookspg/nod.html#section17">
+                    <button class="lngbtn">нажмите сюда</button>
+                </form>
+                </div>
+            </div>
+            <div class="gallery-item">
+                <img src="books/nod18.jpg">
+                <div class="gallery-item-content">
+                    <div class="gallery-item-title">Последнее пророчество, Грегори Киз</div>
+                </div>
+                <div class="gallery-item-overlay">
+                    <h3>Для более подробного ознакомления с книгой</h3>
+                    <form action="bookspg/nod.html#section18">
+                    <button class="lngbtn">нажмите сюда</button>
+                </form>
+                </div>
+            </div>
+            <div class="gallery-item">
+                <img src="books/nod19.jpg">
+                <div class="gallery-item-content">
+                    <div class="gallery-item-title">Единая Сила, Джеймс Лусено</div>
+                </div>
+                <div class="gallery-item-overlay">
+                    <h3>Для более подробного ознакомления с книгой</h3>
+                    <form action="bookspg/nod.html#section19">
+                    <button class="lngbtn">нажмите сюда</button>
+                </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="aa"></div>
+</body>
+</html>

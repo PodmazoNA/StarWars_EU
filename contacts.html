@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<link rel="stylesheet" href="star_style.css">
+<head>
+    <link rel="icon" href="https://i.pinimg.com/736x/ea/db/95/eadb95e3503722bf872a070fea5641cb.jpg" type="image/png">
+    <title>STAR WARS: expanded universe</title>
+    <div class="head-container">
+        <div class="image-container">
+            <img src="ss.gif">
+            <h1>STAR WARS</h1>
+            <h2>expanded universe</h2>
+            <div class="nav-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+            <ul class="nav">
+                <li><a href="index.html">Хронология</a></li>
+                <li><a href="test.html">Что почитать?</a></li>
+                <li><a href="allbooks.html">Библиотека</a></li>
+                <li><a href="contacts.html">Жалобы и предложения</a></li>
+            </ul>
+            <script>
+                const navToggle = document.querySelector('.nav-toggle');
+                const nav = document.querySelector('.nav');
+        
+                navToggle.addEventListener('click', () => {
+                    navToggle.classList.toggle('active');
+                    nav.classList.toggle('active');
+                });
+            </script>
+
+            <style>
+                #itemList {
+                    margin-top: 20px;
+                    list-style-type: none;
+                }
+            </style>
+    </div>
+
+    <script>
+        function generateCaptcha() {
+            const characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz';
+            let captchaText = '';
+            for (let i = 0; i < 5; i++) {
+                captchaText += characters.charAt(Math.floor(Math.random() * characters.length));
+            }
+            document.getElementById('captcha').innerText = captchaText;
+            return captchaText;
+        }
+
+        function generateNumbersCaptcha() {
+            const N = Math.floor(Math.random() * 10) + 1;
+            const M = Math.floor(Math.random() * 10) + 1;
+            document.getElementById('numbers').innerText = `${N} + ${M} =`;
+            document.getElementById('correctSum').value = N + M;
+        }
+
+        function isEmpty(obj) {
+            return Object.keys(obj).length === 0;
+        }
+
+        function validateCaptcha() {
+            const captchaInput = document.getElementById('captchaInput').value;
+            const captchaValue = document.getElementById('captcha').innerText;
+
+            if (isEmpty(captchaInput)) {
+                alert('Введите капчу.');
+                return;
+            }
+
+            if (captchaInput === captchaValue) {
+                document.getElementById('submitBtn').disabled = false;
+                alert('Капча введена верно. Спасибо за понимание.');
+            } else {
+                alert('Капча неверна.');
+                generateCaptcha();
+                document.getElementById('submitBtn').disabled = true;
+            }
+        }
+
+        function validateNumbersCaptcha() {
+            const userSum = document.getElementById('userSum').value;
+            const correctSum = document.getElementById('correctSum').value;
+
+            if (isEmpty(userSum)) {
+                alert('Введите сумму чисел.');
+                return;
+            }
+
+            if (parseInt(userSum) === parseInt(correctSum)) {
+                document.getElementById('submitBtn').disabled = false;
+                alert('Сумма введена верно. Спасибо за понимание.');
+            } else {
+                alert('Сумма неверна.');
+                generateNumbersCaptcha();
+                document.getElementById('submitBtn').disabled = true;
+            }
+        }
+
+        window.onload = function() {
+            generateCaptcha();
+            generateNumbersCaptcha();
+        };
+    </script>
+</head>
+<body>
+    <script>
+        let isDrawing = false;
+        let elements = [];
+        
+        document.addEventListener('dblclick', function(e) {
+          isDrawing = !isDrawing; // Переключаем состояние рисования
+          if (isDrawing) {
+            document.addEventListener('mousemove', drawElement);
+          } else {
+            document.removeEventListener('mousemove', drawElement);
+          }
+        });
+        
+        function drawElement(e) {
+          const element = document.createElement('div');
+          element.classList.add('draw-element');
+          element.style.left = e.pageX + 'px';
+          element.style.top = e.pageY + 'px';
+          document.body.appendChild(element);
+          elements.push(element);
+          setTimeout(() => {
+            element.classList.add('fade-out');
+            setTimeout(() => {
+              document.body.removeChild(element);
+          }, 500);
+          }, 3000);
+        }
+    </script>
+    <div class="content">
+    <div id="captcha-container">
+        <div class="captcha">
+            <h2>Пожалуйста, подтвердите, что вы не дроид, чтобы продолжить</h2>
+            <div id="cont">
+        <strong>Введите капчу:</strong>
+        <span id="captcha" style="background-image: url(images/captch.png); background-color: transparent; border: none; background-size: cover;"></span>
+        <input type="text" id="captchaInput" />
+        <br><button class="lngbtn" id="capbtn" onclick="validateCaptcha()">Проверить капчу</button>
+            </div>
+            <div id="cont">
+        <strong>Введите сумму чисел:</strong>
+        <span id="numbers"></span>
+        <input type="text" id="userSum" />
+        <input type="hidden" id="correctSum" />
+        <br><button class="lngbtn" id="sumbtn" onclick="validateNumbersCaptcha()">Проверить сумму</button>
+            </div>
+            <div>
+        <button id="submitBtn" disabled onclick="this.parentNode.parentNode.parentNode.remove(); return false;">X</button>
+            </div>
+    </div>
+    </div>
+    <h2 id="cont" style="font-size: 200%;">Мы всегда рады новым идеям. Пожалуйста, не забудьте указать имя, чтобы мы знали, кому сказать спасибо.</h2>
+    <div id="cont">
+        <h3 style="font-size: 150%;">Имя</h3>
+        <input type="text" id="ignore">
+        <h3 style="font-size: 150%;">Предложение</h3>
+        <textarea type="text" id="textInput"></textarea>
+        <br><button class="lngbtn" id="addButton">отправить</button></br>
+    </div>
+
+    <script>
+        const maxLength = 50;
+        function truncateText(text, maxLength){
+            if (text.length > maxLength){
+                return text.slice(0, maxLength) + '...';
+            }
+            return text;
+        }
+        document.getElementById("addButton").addEventListener("click", function() {
+            var input = document.getElementById("textInput");
+            var text = input.value.trim();
+
+            if (text !== "") {
+                var listItem = document.createElement("li");
+                listItem.textContent = truncateText(text, maxLength);
+                document.getElementById("itemList").appendChild(listItem);
+                input.value = ""; // Очистить поле ввода
+            } else {
+                alert("Пожалуйста, введите текст.");
+            }
+        });
+    </script>
+
+    <script>
+        let originalHeight = window.innerHeight;
+        window.addEventListener('resize', () => {
+            if (window.innerHeight < originalHeight){
+                document.getElementsByClassName('lngbtn').style.display = `none`;
+            }
+            else{
+                document.getElementsByClassName('lngbtn').style.display = `block`;
+            }
+        });
+    </script>
+
+    <div class="notification-container">
+        <button class="notification-sign">💌</button>
+        <span class="notification-count">0</span>
+        <ul id="itemList"><li>Ваши предложения:</li></ul>
+    </div>
+    </div>
+</body>
+</html>

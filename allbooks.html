@@ -1,0 +1,591 @@
+<!DOCTYPE html>
+<link rel="stylesheet" href="star_style.css">
+<head>
+    <link rel="icon" href="https://i.pinimg.com/736x/ea/db/95/eadb95e3503722bf872a070fea5641cb.jpg" type="image/png">
+    <title>STAR WARS: expanded universe</title>
+    <div class="head-container">
+        <div class="image-container">
+            <img src="ss.gif">
+            <h1>STAR WARS</h1>
+            <h2>expanded universe</h2>
+            <div class="nav-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+            <ul class="nav">
+                <li><a href="index.html">Хронология</a></li>
+                <li><a href="test.html">Что почитать?</a></li>
+                <li><a href="allbooks.html">Библиотека</a></li>
+                <li><a href="contacts.html">Жалобы и предложения</a></li>
+            </ul>
+            <script>
+                const navToggle = document.querySelector('.nav-toggle');
+                const nav = document.querySelector('.nav');
+        
+                navToggle.addEventListener('click', () => {
+                    navToggle.classList.toggle('active');
+                    nav.classList.toggle('active');
+                });
+            </script>
+    </div>
+</head>
+<body>
+    <script>
+        let isDrawing = false;
+        let elements = [];
+        
+        document.addEventListener('dblclick', function(e) {
+          isDrawing = !isDrawing; // Переключаем состояние рисования
+          if (isDrawing) {
+            document.addEventListener('mousemove', drawElement);
+          } else {
+            document.removeEventListener('mousemove', drawElement);
+          }
+        });
+        
+        function drawElement(e) {
+          const element = document.createElement('div');
+          element.classList.add('draw-element');
+          element.style.left = e.pageX + 'px';
+          element.style.top = e.pageY + 'px';
+          document.body.appendChild(element);
+          elements.push(element);
+          setTimeout(() => {
+            element.classList.add('fade-out');
+            setTimeout(() => {
+              document.body.removeChild(element);
+          }, 500);
+          }, 3000);
+        }
+    </script>
+    <div class="content">
+    <div class="gallery">
+
+        <div class="gallery-item">
+            <img src="books/old1.jpg">
+            <div class="gallery-item-content">
+                <div class="gallery-item-title">Роковой альянс, Шон Уильямс</div>
+            </div>
+            <div class="gallery-item-overlay">
+                <h3>Для более подробного ознакомления с книгой</h3>
+                <form action="bookspg/oldrep.html#section1">
+                <button class="lngbtn">нажмите сюда</button>
+            </form>
+            </div>
+        </div>
+        <div class="gallery-item">
+            <img src="books/old2.jpg">
+            <div class="gallery-item-content">
+                <div class="gallery-item-title">Обманутые, Пол Кемп</div>
+            </div>
+            <div class="gallery-item-overlay">
+                <h3>Для более подробного ознакомления с книгой</h3>
+                <form action="bookspg/oldrep.html#section2">
+                <button class="lngbtn">нажмите сюда</button>
+            </form>
+            </div>
+        </div>
+        <div class="gallery-item">
+            <img src="books/old3.jpg">
+            <div class="gallery-item-content">
+                <div class="gallery-item-title">Реван, Дрю Карпишин</div>
+            </div>
+            <div class="gallery-item-overlay">
+                <h3>Для более подробного ознакомления с книгой</h3>
+                <form action="bookspg/oldrep.html#section3">
+                <button class="lngbtn">нажмите сюда</button>
+            </form>
+            </div>
+        </div>
+        <div class="gallery-item">
+            <img src="books/old4.jpg">
+            <div class="gallery-item-content">
+                <div class="gallery-item-title">Истребление, Дрю Карпишин</div>
+            </div>
+            <div class="gallery-item-overlay">
+                <h3>Для более подробного ознакомления с книгой</h3>
+                <form action="bookspg/oldrep.html#section4">
+                <button class="lngbtn">нажмите сюда</button>
+            </form>
+            </div>
+        </div>
+
+        <div class="gallery-item">
+            <img src="books/bane1.jpg">
+            <div class="gallery-item-content">
+                <div class="gallery-item-title">Путь разрушения, Дрю Карпишин</div>
+            </div>
+            <div class="gallery-item-overlay">
+                <h3>Для более подробного ознакомления с книгой</h3>
+                <form action="bookspg/bane.html#section1">
+                <button class="lngbtn">нажмите сюда</button>
+            </form>
+            </div>
+        </div>
+        <div class="gallery-item">
+            <img src="books/bane2.jpg">
+            <div class="gallery-item-content">
+                <div class="gallery-item-title">Правило двух, Дрю Карпишин</div>
+            </div>
+            <div class="gallery-item-overlay">
+                <h3>Для более подробного ознакомления с книгой</h3>
+                <form action="bookspg/bane.html#section2">
+                <button class="lngbtn">нажмите сюда</button>
+            </form>
+            </div>
+        </div>
+        <div class="gallery-item">
+            <img src="books/bane3.jpg">
+            <div class="gallery-item-content">
+                <div class="gallery-item-title">Династия зла, Дрю Карпишин</div>
+            </div>
+            <div class="gallery-item-overlay">
+                <h3>Для более подробного ознакомления с книгой</h3>
+                <form action="bookspg/bane.html#section3">
+                <button class="lngbtn">нажмите сюда</button>
+            </form>
+            </div>
+        </div>
+
+        <div class="gallery-item">
+            <img src="books/plagg.jpg">
+            <div class="gallery-item-content">
+                <div class="gallery-item-title">Дарт Плэгас, Джеймс Лусено</div>
+            </div>
+            <div class="gallery-item-overlay">
+                <h3>Для более подробного ознакомления с книгой</h3>
+                <form action="bookspg/plag.html">
+                <button class="lngbtn">нажмите сюда</button>
+            </form>
+            </div>
+        </div>
+        <div class="gallery-item">
+            <img src="books/lie.jpg">
+            <div class="gallery-item-content">
+                <div class="gallery-item-title">Под покровом лжи, Джеймс Лусено</div>
+            </div>
+            <div class="gallery-item-overlay">
+                <h3>Для более подробного ознакомления с книгой</h3>
+                <form action="bookspg/lie.html">
+                <button class="lngbtn">нажмите сюда</button>
+            </form>
+            </div>
+        </div>
+        <div class="gallery-item">
+            <img src="books/fly.jpg">
+            <div class="gallery-item-content">
+                <div class="gallery-item-title">Сверхдальний перелет, Тимоти Зан</div>
+            </div>
+            <div class="gallery-item-overlay">
+                <h3>Для более подробного ознакомления с книгой</h3>
+                <form action="bookspg/fly.html">
+                <button class="lngbtn">нажмите сюда</button>
+            </form>
+            </div>
+        </div>
+        <div class="gallery-item">
+            <img src="books/ani.jpg">
+            <div class="gallery-item-content">
+                <div class="gallery-item-title">Лабиринт зла, Джеймс Лусено</div>
+            </div>
+            <div class="gallery-item-overlay">
+                <h3>Для более подробного ознакомления с книгой</h3>
+                <form action="bookspg/ani.html">
+                <button class="lngbtn">нажмите сюда</button>
+            </form>
+            </div>
+        </div>
+        <div class="gallery-item">
+            <img src="books/yoda.jpg">
+            <div class="gallery-item-content">
+                <div class="gallery-item-title">Йода: свидание с тьмой, Шон Стюарт</div>
+            </div>
+            <div class="gallery-item-overlay">
+                <h3>Для более подробного ознакомления с книгой</h3>
+                <form action="bookspg/yoda.html">
+                <button class="lngbtn">нажмите сюда</button>
+            </form>
+            </div>
+        </div>
+        <div class="gallery-item">
+            <img src="books/point.jpg">
+            <div class="gallery-item-content">
+                <div class="gallery-item-title">Уязвимая точка, Мэтью Стовер</div>
+            </div>
+            <div class="gallery-item-overlay">
+                <h3>Для более подробного ознакомления с книгой</h3>
+                <form action="bookspg/point.html">
+                <button class="lngbtn">нажмите сюда</button>
+            </form>
+            </div>
+        </div>
+
+        <div class="gallery-item">
+            <img src="books/vader.jpg">
+            <div class="gallery-item-content">
+                <div class="gallery-item-title">Темный повелитель: восход Дарта Вейдера, Джеймс Лусено</div>
+            </div>
+            <div class="gallery-item-overlay">
+                <h3>Для более подробного ознакомления с книгой</h3>
+                <form action="bookspg/vader.html">
+                <button class="lngbtn">нажмите сюда</button>
+            </form>
+            </div>
+        </div>
+        <div class="gallery-item">
+            <img src="books/501.jpg">
+            <div class="gallery-item-content">
+                <div class="gallery-item-title">Имперские коммандос: 501-ый, Карен Тревисс</div>
+            </div>
+            <div class="gallery-item-overlay">
+                <h3>Для более подробного ознакомления с книгой</h3>
+                <form action="bookspg/501.html">
+                <button class="lngbtn">нажмите сюда</button>
+            </form>
+            </div>
+        </div>
+        <div class="gallery-item">
+            <img src="books/lastofus.jpg">
+            <div class="gallery-item-content">
+                <div class="gallery-item-title">Последний джедай, Майкл Ривз и Майя Кэтрин Бонхофф</div>
+            </div>
+            <div class="gallery-item-overlay">
+                <h3>Для более подробного ознакомления с книгой</h3>
+                <form action="bookspg/lastjedi.html">
+                <button class="lngbtn">нажмите сюда</button>
+            </form>
+            </div>
+        </div>
+
+        <div class="gallery-item">
+            <img src="books/sh.jpg">
+            <div class="gallery-item-content">
+                <div class="gallery-item-title">Тени Империи, Стив Перри</div>
+            </div>
+            <div class="gallery-item-overlay">
+                <h3>Для более подробного ознакомления с книгой</h3>
+                <form action="bookspg/shad.html">
+                <button class="lngbtn">нажмите сюда</button>
+            </form>
+            </div>
+        </div>
+        <div class="gallery-item">
+            <img src="books/prleia.jpg">
+            <div class="gallery-item-content">
+                <div class="gallery-item-title">Выбор принцессы Леи, Дэйв Волвертон</div>
+            </div>
+            <div class="gallery-item-overlay">
+                <h3>Для более подробного ознакомления с книгой</h3>
+                <form action="bookspg/leiachoise.html">
+                <button class="lngbtn">нажмите сюда</button>
+            </form>
+            </div>
+        </div>
+        <div class="gallery-item">
+            <img src="books/sword.jpg">
+            <div class="gallery-item-content">
+                <div class="gallery-item-title">Меч тьмы, Кевин Андерсон</div>
+            </div>
+            <div class="gallery-item-overlay">
+                <h3>Для более подробного ознакомления с книгой</h3>
+                <form action="bookspg/swo.html">
+                <button class="lngbtn">нажмите сюда</button>
+            </form>
+            </div>
+        </div>
+        <div class="gallery-item">
+            <img src="books/delo.jpg">
+            <div class="gallery-item-content">
+                <div class="gallery-item-title">Дело чести, Тимоти Зан</div>
+            </div>
+            <div class="gallery-item-overlay">
+                <h3>Для более подробного ознакомления с книгой</h3>
+                <form action="bookspg/dil.html#section1">
+                <button class="lngbtn">нажмите сюда</button>
+            </form>
+            </div>
+        </div>
+        <div class="gallery-item">
+            <img src="books/igra.jpg">
+            <div class="gallery-item-content">
+                <div class="gallery-item-title">Игра вслепую, Тимоти Зан</div>
+            </div>
+            <div class="gallery-item-overlay">
+                <h3>Для более подробного ознакомления с книгой</h3>
+                <form action="bookspg/dil.html#section2">
+                <button class="lngbtn">нажмите сюда</button>
+            </form>
+            </div>
+        </div>
+
+        <div class="gallery-item">
+            <img src="books/hier.jpg">
+            <div class="gallery-item-content">
+                <div class="gallery-item-title">Наследник Империи, Тимоти Зан</div>
+            </div>
+            <div class="gallery-item-overlay">
+                <h3>Для более подробного ознакомления с книгой</h3>
+                <form action="bookspg/hier.html#section1">
+                <button class="lngbtn">нажмите сюда</button>
+            </form>
+            </div>
+        </div>
+        <div class="gallery-item">
+            <img src="books/dark.jpg">
+            <div class="gallery-item-content">
+                <div class="gallery-item-title">Возрождение тьмы, Тимоти Зан</div>
+            </div>
+            <div class="gallery-item-overlay">
+                <h3>Для более подробного ознакомления с книгой</h3>
+                <form action="bookspg/hier.html#section2">
+                <button class="lngbtn">нажмите сюда</button>
+            </form>
+            </div>
+        </div>
+        <div class="gallery-item">
+            <img src="books/lastorder.jpg">
+            <div class="gallery-item-content">
+                <div class="gallery-item-title">Последний приказ, Тимоти Зан</div>
+            </div>
+            <div class="gallery-item-overlay">
+                <h3>Для более подробного ознакомления с книгой</h3>
+                <form action="bookspg/hier.html#section3">
+                <button class="lngbtn">нажмите сюда</button>
+            </form>
+            </div>
+        </div>
+
+        <div class="gallery-item">
+            <img src="books/nod1.jpg">
+            <div class="gallery-item-content">
+                <div class="gallery-item-title">Вектор-прайм, Роберт Сальваторе</div>
+            </div>
+            <div class="gallery-item-overlay">
+                <h3>Для более подробного ознакомления с книгой</h3>
+                <form action="bookspg/nod.html#section1">
+                <button class="lngbtn">нажмите сюда</button>
+            </form>
+            </div>
+        </div>
+        <div class="gallery-item">
+            <img src="books/nod2.jpg">
+            <div class="gallery-item-content">
+                <div class="gallery-item-title">Темный прилив 1: натиск, Майкл Стэкпол</div>
+            </div>
+            <div class="gallery-item-overlay">
+                <h3>Для более подробного ознакомления с книгой</h3>
+                <form action="bookspg/nod.html#section2">
+                <button class="lngbtn">нажмите сюда</button>
+            </form>
+            </div>
+        </div>
+        <div class="gallery-item">
+            <img src="books/nod3.jpg">
+            <div class="gallery-item-content">
+                <div class="gallery-item-title">Темный прилив 2: руины, Майкл Стэкпол</div>
+            </div>
+            <div class="gallery-item-overlay">
+                <h3>Для более подробного ознакомления с книгой</h3>
+                <form action="bookspg/nod.html#section3">
+                <button class="lngbtn">нажмите сюда</button>
+            </form>
+            </div>
+        </div>
+        <div class="gallery-item">
+            <img src="books/nod4.jpg">
+            <div class="gallery-item-content">
+                <div class="gallery-item-title">Посланники хаоса 1: проверка на прочность, Джеймс Лусено</div>
+            </div>
+            <div class="gallery-item-overlay">
+                <h3>Для более подробного ознакомления с книгой</h3>
+                <form action="bookspg/nod.html#section4">
+                <button class="lngbtn">нажмите сюда</button>
+            </form>
+            </div>
+        </div>
+        <div class="gallery-item">
+            <img src="books/nod5.jpg">
+            <div class="gallery-item-content">
+                <div class="gallery-item-title">Посланники хаоса 2: сумерки джедаев, Джеймс Лусено</div>
+            </div>
+            <div class="gallery-item-overlay">
+                <h3>Для более подробного ознакомления с книгой</h3>
+                <form action="bookspg/nod.html#section5">
+                <button class="lngbtn">нажмите сюда</button>
+            </form>
+            </div>
+        </div>
+        <div class="gallery-item">
+            <img src="books/nod6.jpg">
+            <div class="gallery-item-content">
+                <div class="gallery-item-title">Точка равновесия, Кэти Тайерс</div>
+            </div>
+            <div class="gallery-item-overlay">
+                <h3>Для более подробного ознакомления с книгой</h3>
+                <form action="bookspg/nod.html#section6">
+                <button class="lngbtn">нажмите сюда</button>
+            </form>
+            </div>
+        </div>
+        <div class="gallery-item">
+            <img src="books/nod7.jpg">
+            <div class="gallery-item-content">
+                <div class="gallery-item-title">На грани победы 1: завоевание, Грегори Киз</div>
+            </div>
+            <div class="gallery-item-overlay">
+                <h3>Для более подробного ознакомления с книгой</h3>
+                <form action="bookspg/nod.html#section7">
+                <button class="lngbtn">нажмите сюда</button>
+            </form>
+            </div>
+        </div>
+        <div class="gallery-item">
+            <img src="books/nod8.jpg">
+            <div class="gallery-item-content">
+                <div class="gallery-item-title">На грани победы 2: возрождение, Грегори Киз</div>
+            </div>
+            <div class="gallery-item-overlay">
+                <h3>Для более подробного ознакомления с книгой</h3>
+                <form action="bookspg/nod.html#section8">
+                <button class="lngbtn">нажмите сюда</button>
+            </form>
+            </div>
+        </div>
+        <div class="gallery-item">
+            <img src="books/nod9.jpg">
+            <div class="gallery-item-content">
+                <div class="gallery-item-title">Звезда за звездой, Трой Деннинг</div>
+            </div>
+            <div class="gallery-item-overlay">
+                <h3>Для более подробного ознакомления с книгой</h3>
+                <form action="bookspg/nod.html#section9">
+                <button class="lngbtn">нажмите сюда</button>
+            </form>
+            </div>
+        </div>
+        <div class="gallery-item">
+            <img src="books/nod10.jpg">
+            <div class="gallery-item-content">
+                <div class="gallery-item-title">Путешествие во тьму, Элейн Каннингем</div>
+            </div>
+            <div class="gallery-item-overlay">
+                <h3>Для более подробного ознакомления с книгой</h3>
+                <form action="bookspg/nod.html#section10">
+                <button class="lngbtn">нажмите сюда</button>
+            </form>
+            </div>
+        </div>
+        <div class="gallery-item">
+            <img src="books/nod11.jpg">
+            <div class="gallery-item-content">
+                <div class="gallery-item-title">В тылу врага 1: мятежная мечта, Аарон Оллстон</div>
+            </div>
+            <div class="gallery-item-overlay">
+                <h3>Для более подробного ознакомления с книгой</h3>
+                <form action="bookspg/nod.html#section11">
+                <button class="lngbtn">нажмите сюда</button>
+            </form>
+            </div>
+        </div>
+        <div class="gallery-item">
+            <img src="books/nod12.jpg">
+            <div class="gallery-item-content">
+                <div class="gallery-item-title">В тылу врага 2: мятежная стойкость, Аарон Оллстон</div>
+            </div>
+            <div class="gallery-item-overlay">
+                <h3>Для более подробного ознакомления с книгой</h3>
+                <form action="bookspg/nod.html#section12">
+                <button class="lngbtn">нажмите сюда</button>
+            </form>
+            </div>
+        </div>
+        <div class="gallery-item">
+            <img src="books/nod13.jpg">
+            <div class="gallery-item-content">
+                <div class="gallery-item-title">Изменник, Мэттью Стовер</div>
+            </div>
+            <div class="gallery-item-overlay">
+                <h3>Для более подробного ознакомления с книгой</h3>
+                <form action="bookspg/nod.html#section13">
+                <button class="lngbtn">нажмите сюда</button>
+            </form>
+            </div>
+        </div>
+        <div class="gallery-item">
+            <img src="books/nod14.jpg">
+            <div class="gallery-item-content">
+                <div class="gallery-item-title">Путь судьбы, Уолтер Уильямс</div>
+            </div>
+            <div class="gallery-item-overlay">
+                <h3>Для более подробного ознакомления с книгой</h3>
+                <form action="bookspg/nod.html#section14">
+                <button class="lngbtn">нажмите сюда</button>
+            </form>
+            </div>
+        </div>
+        <div class="gallery-item">
+            <img src="books/nod15.jpg">
+            <div class="gallery-item-content">
+                <div class="gallery-item-title">Еретик Силы 1: обломки, Шон Уильямс и Шейн Дикс</div>
+            </div>
+            <div class="gallery-item-overlay">
+                <h3>Для более подробного ознакомления с книгой</h3>
+                <form action="bookspg/nod.html#section15">
+                <button class="lngbtn">нажмите сюда</button>
+            </form>
+            </div>
+        </div>
+        <div class="gallery-item">
+            <img src="books/nod16.jpg">
+            <div class="gallery-item-content">
+                <div class="gallery-item-title">Еретик Силы 2: обездоленные, Шон Уильямс и Шейн Дикс</div>
+            </div>
+            <div class="gallery-item-overlay">
+                <h3>Для более подробного ознакомления с книгой</h3>
+                <form action="bookspg/nod.html#section16">
+                <button class="lngbtn">нажмите сюда</button>
+            </form>
+            </div>
+        </div>
+        <div class="gallery-item">
+            <img src="books/nod17.jpg">
+            <div class="gallery-item-content">
+                <div class="gallery-item-title">Еретик Силы 3: объединение, Шон Уильямс и Шейн Дикс</div>
+            </div>
+            <div class="gallery-item-overlay">
+                <h3>Для более подробного ознакомления с книгой</h3>
+                <form action="bookspg/nod.html#section17">
+                <button class="lngbtn">нажмите сюда</button>
+            </form>
+            </div>
+        </div>
+        <div class="gallery-item">
+            <img src="books/nod18.jpg">
+            <div class="gallery-item-content">
+                <div class="gallery-item-title">Последнее пророчество, Грегори Киз</div>
+            </div>
+            <div class="gallery-item-overlay">
+                <h3>Для более подробного ознакомления с книгой</h3>
+                <form action="bookspg/nod.html#section18">
+                <button class="lngbtn">нажмите сюда</button>
+            </form>
+            </div>
+        </div>
+        <div class="gallery-item">
+            <img src="books/nod19.jpg">
+            <div class="gallery-item-content">
+                <div class="gallery-item-title">Единая Сила, Джеймс Лусено</div>
+            </div>
+            <div class="gallery-item-overlay">
+                <h3>Для более подробного ознакомления с книгой</h3>
+                <form action="bookspg/nod.html#section19">
+                <button class="lngbtn">нажмите сюда</button>
+            </form>
+            </div>
+        </div>
+    </div>
+    </div>
+</body>
+</html>
