@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<link rel="stylesheet" href="../star_style.css">
+<head>
+<style>
+    body{
+        background-color: rgb(22, 8, 52);
+    }
+    h1{
+      font-size: clamp(30px, 3.5vw, 60px);
+      text-align: center;
+      margin-bottom: -1vh;
+      color: yellow;
+    }
+</style>
+</head>
+
+<body>
+    <script>
+        let isDrawing = false;
+        let elements = [];
+        
+        document.addEventListener('dblclick', function(e) {
+          isDrawing = !isDrawing; // Переключаем состояние рисования
+          if (isDrawing) {
+            document.addEventListener('mousemove', drawElement);
+          } else {
+            document.removeEventListener('mousemove', drawElement);
+          }
+        });
+        
+        function drawElement(e) {
+          const element = document.createElement('div');
+          element.classList.add('draw-element');
+          element.style.left = e.pageX + 'px';
+          element.style.top = e.pageY + 'px';
+          document.body.appendChild(element);
+          elements.push(element);
+          setTimeout(() => {
+            element.classList.add('fade-out');
+            setTimeout(() => {
+              document.body.removeChild(element);
+          }, 500);
+          }, 3000);
+        }
+    </script>
+    <h1 id="manybooks">ПОСЛЕДНИЙ ДЖЕДАЙ</h1>
+    <section id="section1">
+    <div class="book-content">
+      <div class="image-section">
+          <img src="../books/lastofus.jpg" alt="Описание картинки" />
+      </div>
+      <div class="text-section">
+          <p>С тех пор, как Император Палпатин отдал Приказ 66 — казнить всех джедаев — Джакс Паван остался последним рыцарем, кто еще может сражаться с темной стороной Силы. Вместе со своим дроидом И-5 Джакс раз за разом ускользал от Вейдера, все это время нанося ущерб Империи с помощью подпольного сопротивления на Корусанте. Но когда в экуменополисе попадает в плен лидер Повстанцев, настает время последнему из джедаев снова отправиться в бой… который, возможно, станет его последним приключением.</p>
+          <div class="button-container">
+            <form action="https://www.rulit.me/books/poslednij-dzhedaj-lp-download-655575.html">
+              <button class="lngbtn">ЧИТАТЬ</button>
+            </form>
+            <form action="https://readli.net/posledniy-dzheday-lp/">
+              <button class="lngbtn">СКАЧАТЬ</button>
+            </form>
+          </div>
+      </div>
+    </div>
+  </section>
+  <foter style="margin-bottom: 5vh;"></foter>
+</body>
+</html>

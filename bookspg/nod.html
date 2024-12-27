@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<link rel="stylesheet" href="../star_style.css">
+<head>
+<style>
+    body{
+        background-color: rgb(22, 8, 52);
+    }
+    h1{
+      font-size: clamp(30px, 3.5vw, 60px);
+      text-align: center;
+      margin-bottom: -1vh;
+      color: yellow;
+    }
+</style>
+</head>
+
+<body>
+    <script>
+        let isDrawing = false;
+        let elements = [];
+        
+        document.addEventListener('dblclick', function(e) {
+          isDrawing = !isDrawing; // Переключаем состояние рисования
+          if (isDrawing) {
+            document.addEventListener('mousemove', drawElement);
+          } else {
+            document.removeEventListener('mousemove', drawElement);
+          }
+        });
+        
+        function drawElement(e) {
+          const element = document.createElement('div');
+          element.classList.add('draw-element');
+          element.style.left = e.pageX + 'px';
+          element.style.top = e.pageY + 'px';
+          document.body.appendChild(element);
+          elements.push(element);
+          setTimeout(() => {
+            element.classList.add('fade-out');
+            setTimeout(() => {
+              document.body.removeChild(element);
+          }, 500);
+          }, 3000);
+        }
+    </script>
+    <h1 id="manybooks">НОВЫЙ ОРДЕН ДЖЕДАЕВ</h1>
+    <section id="section1">
+    <div class="book-content">
+      <div class="image-section">
+          <img src="../books/nod1.jpg" alt="Описание картинки" />
+      </div>
+      <div class="text-section">
+          <h2>ВЕКТОР-ПРАЙМ</h2>
+          <p>Империя рухнула, но неожиданный внешний враг — загадочная и воинственная цивилизация юужань-вонгов — стремится захватить галактику, проверяя на прочность мирные, но отнюдь не безмятежные будни Новой Республики. Коварный лазутчик Ном Анор плетет интриги, искусно используя проблемы, доставшиеся в наследство от Империи народам галактики, и планеты гибнут в войнах и катастрофах. И вновь в центре событий оказываются Хан и Лея Соло, их дети, Люк и Мара Джейд Скайуокеры, верный друг Чубакка и пройдоха старина Лэндо Калриссиан. На их стороне изворотливость человеческого ума, отвага и боевой опыт бывалых пилотов, мужество и Сила джедаев и старая дружба. Но хватит ли этого, чтобы остановить вторжение и сорвать великолепно подготовленную военную операцию?</p>
+          <div class="button-container">
+            <form action="https://libcat.ru/knigi/fantastika-i-fjentezi/boevaya-fantastika/9927-robert-salvatore-vektor-prim.html">
+              <button class="lngbtn">ЧИТАТЬ</button>
+            </form>
+            <form action="https://bookscafe.net/book/salvatore_robert-star_wars_vektor_prim-73751.html">
+              <button class="lngbtn">СКАЧАТЬ</button>
+            </form>
+          </div>
+      </div>
+    </div>
+  </section>
+<section id="section2">
+    <div id="right-book" class="book-content">
+      <div class="image-section">
+        <img src="../books/nod2.jpg" alt="Описание картинки" />
+    </div>
+    <div class="text-section">
+        <h2>ТЕМНЫЙ ПРИЛИВ 1: НАТИСК</h2>
+        <p>Двадцать пять лет прошло с битвы при Явине. В Новой Республике опять неспокойно. Первая победа над юужань-вонгами не отпугнула воинственных пришельцев из другой галактики. Хитроумный исполнитель Ном Анор ушел в тень. И командующий Шедао Шаи готов начать полномасштабные боевые действия.
+
+            В то время, когда жизни мирных жителей в опасности и сплоченность нужна более всего, лидеры Новой Республики заняты дележом власти. Надежда только на сенатора-каамаси Элегоса А’Кла, ведущего миротворческую политику, и вернувшегося в строй Веджа Антиллеса. Разбойная эскадрилья снова в полном составе! Рыцари-джедаи Корран Хорн и Ганнер Райсод, полковник Гэвин Дарклайтер и Разбойная эскадрилья, Лея Органа-Соло и внуки Дарта Вейдера, Люк Скайуокер и Мара Джейд снова на боевых рубежах Звездных Войн!</p>
+        <div class="button-container">
+          <form action="https://libcat.ru/knigi/fantastika-i-fjentezi/boevaya-fantastika/10342-majkl-stekpol-temnyj-priliv-1-natisk.html">
+            <button class="lngbtn">ЧИТАТЬ</button>
+          </form>
+          <form action="https://bookscafe.net/book/stekpol_maykl-temnyy_priliv_1_natisk-74724.html">
+            <button class="lngbtn">СКАЧАТЬ</button>
+          </form>
+        </div>
+    </div>
+    </div>
+  </section>
+  <section id="section3">
+    <div class="book-content">
+      <div class="image-section">
+        <img src="../books/nod3.jpg" alt="Описание картинки" />
+    </div>
+    <div class="text-section">
+        <h2>ТЕМНЫЙ ПРИЛИВ 2: РУИНЫ</h2>
+        <p>Более двадцати лет прошло со времён падения Империи. Мирные времена оказались недолговечными. Орды безжалостных захватчиков юужань-вонгов — пришельцев из другой галактики — вторгаются в пределы Новой Республики. Один за другим миры Внешних территорий сдаются под натиском противника.
+
+            И вот, когда перед народами Республики встала необходимость сплотиться перед лицом опасности, в их рядах намечается раскол. И причиной во многом становятся джедаи: от них ждут чуда, но они оказываются не в состоянии что-либо противопоставить захватчикам, невосприимчивым к Силе. Да и среди самих джедаев царит смятение: некоторые из них, недовольные политикой Люка Скайуокера, готовы отколоться от Ордена и действовать на своё усмотрение.
+            
+            Если Галактика не найдёт политического единения, в будущем её может ждать только катастрофа. Тем более что юужань-вонги уже выбрали новую цель для нападения — мирную и цветущую планету Итор.
+            
+            Генерал Новой Республики Ведж Антиллес и Гранд адмирал Империи Гилад Пеллеон, Люк Скайуокер и юужань-вонг Шедао Шаи, сенатор Борск Фей'лия и пилот Корран Хорн, близнецы Соло и посланник Элегос А'Кла в тёмном приливе межгалактического нашествия вселенной Звёздных войн!</p>
+        <div class="button-container">
+          <form action="https://libcat.ru/knigi/fantastika-i-fjentezi/boevaya-fantastika/10341-majkl-stekpol-temnyj-priliv-2-ruiny.html">
+            <button class="lngbtn">ЧИТАТЬ</button>
+          </form>
+          <form action="https://bookscafe.net/book/stekpol_maykl-temnyy_priliv_2_ruiny-74725.html">
+            <button class="lngbtn">СКАЧАТЬ</button>
+          </form>
+        </div>
+    </div>
+    </div>
+  </section>
+  <section id="section4">
+    <div id="right-book" class="book-content">
+      <div class="image-section">
+        <img src="../books/nod4.jpg" alt="Описание картинки" />
+    </div>
+    <div class="text-section">
+        <h2>ПОСЛАННИКИ ХАОСА 1: ПРОВЕРКА НА ПРОЧНОСТЬ</h2>
+        <p>Галактика переживает нашествие жестокой расы юужань-вонгов. Новая Республика потеряла систему Итор. Захватчики вторгаются в другие миры. Галактика наводнена нескончаемыми потоками беженцев, а сенат Новой Республики не в состоянии решить их проблему. Новое командование юужань-вонгов планирует внедрить своего агента в ряды джедаев и раз и навсегда покончить со своей основной преградой на пути к господству над галактикой…
+
+            А один из самых прославленных героев Новой Республики Хан Соло, глубоко переживающий гибель друга и напарника, стоит на пороге серьезных испытаний. Ему предстоит многое переосмыслить в своем прошлом и столкнуться с реалиями настоящего — организацией, цель которой — помощь захватчикам в их священном походе. Но сумеет ли Хан справиться со своей скорбью по погибшему Чубакке и вновь встать на путь противостояния?</p>
+        <div class="button-container">
+          <form action="https://libcat.ru/knigi/fantastika-i-fjentezi/boevaya-fantastika/19616-dzhejms-lucheno-poslanniki-haosa-1-proverka-na-prochnost.html">
+            <button class="lngbtn">ЧИТАТЬ</button>
+          </form>
+          <form action="https://bookscafe.net/book/lucheno_dzheyms-poslanniki_haosa_1_proverka_na_prochnost-70670.html">
+            <button class="lngbtn">СКАЧАТЬ</button>
+          </form>
+        </div>
+    </div>
+    </div>
+  </section>
+  <section id="section5">
+    <div class="book-content">
+      <div class="image-section">
+        <img src="../books/nod5.jpg" alt="Описание картинки" />
+    </div>
+    <div class="text-section">
+        <h2>ПОСЛАННИКИ ХАОСА 2: СУМЕРКИ ДЖЕДАЕВ</h2>
+        <p>Череда разгромных поражений от юужань-вонгов ввергла Новую Республику в жесточайший кризис, граничащий с гибелью. Принцесса Лея Органа-Соло занимается эвакуацией беженцев с планет, оказавшихся на пути захватчиков из другой галактики. Люк Скайуокер с трудом удерживает от распада Новый орден джедаев. А генерал Соло без лишних слов вступает в бой с врагом в твердом намерении сдержать нападение, а заодно помочь новому другу найти семью…</p>
+        <div class="button-container">
+          <form action="https://libcat.ru/knigi/fantastika-i-fjentezi/boevaya-fantastika/19615-dzhejms-lucheno-poslanniki-haosa-2-sumerki-dzhedaev.html">
+            <button class="lngbtn">ЧИТАТЬ</button>
+          </form>
+          <form action="https://bookscafe.net/book/stekpol_maykl-temnyy_priliv_2_ruiny-74725.html">
+            <button class="lngbtn">СКАЧАТЬ</button>
+          </form>
+        </div>
+    </div>
+    </div>
+  </section>
+  <section id="section6">
+    <div id="right-book" class="book-content">
+      <div class="image-section">
+        <img src="../books/nod6.jpg" alt="Описание картинки" />
+    </div>
+    <div class="text-section">
+        <h2>ТОЧКА РАВНОВЕСИЯ</h2>
+        <p>Орды юужань-вонгов под командованием мастера войны Цавонга Ла готовят нападение на орбитальные города планеты Дуро, отравленной тысячелетними технологическими процессами. Система Дуро переполнена беженцами, стремящимися уйти из зоны военного конфликта. Новая Республика планирует рискованную военную операцию…</p>
+        <div class="button-container">
+          <form action="https://libcat.ru/knigi/fantastika-i-fjentezi/boevaya-fantastika/109776-keti-tajers-tochka-opory.html">
+            <button class="lngbtn">ЧИТАТЬ</button>
+          </form>
+          <form action="https://bookscafe.net/book/tayers_keti-star_wars_tochka_opory-74991.html">
+            <button class="lngbtn">СКАЧАТЬ</button>
+          </form>
+        </div>
+    </div>
+    </div>
+  </section>
+  <section id="section7">
+    <div class="book-content">
+      <div class="image-section">
+        <img src="../books/nod7.jpg" alt="Описание картинки" />
+    </div>
+    <div class="text-section">
+        <h2>НА ГРАНИ ПОБЕДЫ 1: ЗАВОЕВАНИЕ</h2>
+        <p>Не удовлетворившись сотворённым юужань-вонгами разорением, мастер войны Цавонг Ла требует принести ему головы всех джедаев. Отныне джедаи в страшной опасности — и в особенности дети, проходящие обучение в Академии на Явине-4. Коллаборационисты из Бригады Мира уже прибыли в систему Явина — и не за горами появление флота юужань-вонгов.
+
+            По просьбе Люка Скайуокера Тэлон Каррд готовит спасательную операцию. Но у Энакина Соло свои планы. Понимая, что получить прощение гораздо проще, чем разрешение, импульсивный Энакин срывается на Явин 4 на «крестокрыле». Он решителен, твёрд, отважен, проявляет необычайные задатки в обращении с Силой — во всём этом ему мало равных. Но когда в плен к юужань-вонгам попадает его лучшая подруга Тахири, спасение может оказаться не по плечу даже ему. Потому как у чужаков свои планы насчёт Тахири, и в стремлении реализовать свои ужасные замыслы они не остановятся ни перед чем.</p>
+        <div class="button-container">
+          <form action="https://libcat.ru/knigi/fantastika-i-fjentezi/boevaya-fantastika/22196-greg-kejes-na-grani-pobedy-1-zavoevanie.html">
+            <button class="lngbtn">ЧИТАТЬ</button>
+          </form>
+          <form action="https://bookscafe.net/book/kiz_greg-novyy_orden_dzheday_9_na_grani_pobedy_1_zavoevanie-209305.html">
+            <button class="lngbtn">СКАЧАТЬ</button>
+          </form>
+        </div>
+    </div>
+    </div>
+  </section>
+  <section id="section8">
+    <div id="right-book" class="book-content">
+      <div class="image-section">
+        <img src="../books/nod8.jpg" alt="Описание картинки" />
+    </div>
+    <div class="text-section">
+        <h2>НА ГРАНИ ПОБЕДЫ 2: ВОЗРОЖДЕНИЕ</h2>
+        <p>Безжалостные юужань-вонги ищут возможность избавить галактику от джедаев. Не получая помощи от расщепленной дрязгами Новой Республики, джедаи в одиночку противостоят противнику, который кажется непобедимым. Хан и Лея Соло с риском для жизни приводят в действие сомнительный план по организации джедайского сопротивления. Энакин Соло и Тахири становятся мишенью Бригады Мира. Пытаясь избежать пленения, они совершают прыжок в гиперпространство… но на выходе их ждёт ещё более серьёзная опасность.
+
+            Преследуемые юужань-вонгами, разыскиваемые как преступники по всей Новой Республике, раздираемые смятением, царящим в собственных рядах, джедаи рискуют уйти в небытие. И впереди битва, которая определит их судьбы…
+            
+            А тем временем галактику ожидает рождение одного очень особенного ребёнка — наследника рода Скайуокеров.</p>
+        <div class="button-container">
+          <form action="https://libcat.ru/knigi/fantastika-i-fjentezi/boevaya-fantastika/311528-gregori-kiz-na-grani-pobedy-2-vozrozhdenie.html">
+            <button class="lngbtn">ЧИТАТЬ</button>
+          </form>
+          <form action="https://bookscafe.net/book/keyes_gregori-na_grani_pobedy_2_vozrozhdenie-156240.html">
+            <button class="lngbtn">СКАЧАТЬ</button>
+          </form>
+        </div>
+    </div>
+    </div>
+  </section>
+  <section id="section9">
+    <div class="book-content">
+      <div class="image-section">
+        <img src="../books/nod9.jpg" alt="Описание картинки" />
+    </div>
+    <div class="text-section">
+        <h2>ЗВЕЗДА ЗА ЗВЕЗДОЙ</h2>
+        <p>Для Новой Республики наступило время решающих сражений. Безжалостные захватчики юужань-вонги, возобновившие свой священный поход, явили миру новое оружие — диких существ, способных выслеживать и убивать джедаев. Лее Органе Соло предъявлен чудовищный ультиматум: если местоположение базы джедаев не будет раскрыто в течение недели, миллионы кораблей с беженцами погибнут под ударами юужань-вонгов.
+
+            Джедаи терпят поражения, но они не сломлены, и младший сын Леи Энакин предлагает дерзкий план. Он готов возглавить ударную команду джедаев, которая проникнет в главный оплот врага и саботирует разработки оружия. И там, стоя бок о бок с братом и сестрой, он встретит свою судьбу — как и вся Новая Республика, замершая в ожидании битвы, которая решит всё…</p>
+        <div class="button-container">
+          <form action="https://libcat.ru/knigi/fantastika-i-fjentezi/boevaya-fantastika/347287-troj-denning-novyj-orden-dzhedaev-zvezda-za-zvezdoj.html">
+            <button class="lngbtn">ЧИТАТЬ</button>
+          </form>
+          <form action="https://bookscafe.net/book/denning_troy-novyy_orden_dzhedaev_zvezda_za_zvezdoy-5091.html">
+            <button class="lngbtn">СКАЧАТЬ</button>
+          </form>
+        </div>
+    </div>
+    </div>
+  </section>
+  <section id="section10">
+    <div id="right-book" class="book-content">
+      <div class="image-section">
+        <img src="../books/nod10.jpg" alt="Описание картинки" />
+    </div>
+    <div class="text-section">
+        <h2>ПУТЕШЕСТВИЕ ВО ТЬМУ</h2>
+        <p>Для Республики наступают тяжелые времена. Корусант захвачен юужань-вонгами, множество людей, сенаторов убито, джедаи почти исчезли. Единственная надежда на Лею Органу Соло и ее родственников, а также сопротивление, но после смерти Энакина Соло происходят ужасные вещи: Джейсена захватили в плен юужань-вонги, а Джайна Соло слишком близко подходит к Темной стороне силы…
+
+            Опасная миссия джедаев на вражеской территории подошла к концу. Однако немногие члены Ордена остались в живых.
+            
+            Отчаянный пилот Джейна Соло, украв вражеский корабль, забирает оставшихся в живых джедаев, и, спасаясь от преследования, ищет приют на незащищенной и недружелюбной планете. Охваченная идеей мести за гибель друзей, Джейна оказывается у той грани, за которой ее ждет Темная сторона. В приближающемся пожарище новой войны Джейна Соло будет сражаться не ради победы или мести, а ради возможности остаться собой…</p>
+        <div class="button-container">
+          <form action="https://www.rulit.me/books/pute-shestvie-vo-tmu-zvezdnye-vojny-novyj-orden-dzhedaev-10-read-564174-1.html">
+            <button class="lngbtn">ЧИТАТЬ</button>
+          </form>
+          <form action="https://avidreaders.ru/book/puteshestvie-vo-tmu.html">
+            <button class="lngbtn">СКАЧАТЬ</button>
+          </form>
+        </div>
+    </div>
+    </div>
+  </section>
+  <section id="section11">
+    <div class="book-content">
+      <div class="image-section">
+        <img src="../books/nod11.jpg" alt="Описание картинки" />
+    </div>
+    <div class="text-section">
+        <h2>В ТЫЛУ ВРАГА 1: МЯТЕЖНАЯ МЕЧТА</h2>
+        <p>После вторжения юужань-вонгов на Корусант члены Консультативного Совета Новой Республики в страхе бежали и теперь, в попытке выиграть немного времени, планируют соорудить оплот обороны на близлежащей планете Борлейас. Однако их интриги не способны одурачить никого, и уже тем более джедаев.
+
+            Лея и Хан Соло мечутся с планеты на планету в надежде дать отпор гибельной новореспубликанской политике умиротворения захватчиков. Но самое опасное задание избрал для себя Люк Скайуокер: он должен проникнуть в цитадель юужань-вонгов на Корусанте. Его смелый план может закончиться триумфом… а может обернуться и полным провалом. Тем временем у Борлейас скапливается юужань-вонгский флот вторжения, призванный нести гибель последним защитникам галактики…</p>
+        <div class="button-container">
+          <form action="https://libcat.ru/knigi/fantastika-i-fjentezi/boevaya-fantastika/14502-aaron-ollston-v-tylu-vraga-1-mechta-povstanca.html">
+            <button class="lngbtn">ЧИТАТЬ</button>
+          </form>
+          <form action="https://bookscafe.net/book/ollston_aarron-mechta_povstanca_v_tylu_vraga_1-50013.html">
+            <button class="lngbtn">СКАЧАТЬ</button>
+          </form>
+        </div>
+    </div>
+    </div>
+  </section>
+  <section id="section12">
+    <div id="right-book" class="book-content">
+      <div class="image-section">
+        <img src="../books/nod12.jpg" alt="Описание картинки" />
+    </div>
+    <div class="text-section">
+        <h2>В ТЫЛУ ВРАГА 2: МЯТЕЖНАЯ СТОЙКОСТЬ</h2>
+        <p>Юужань-вонги жаждут смести со своего пути последние редуты Новой Республики, и её защитникам приходится туго на всех фронтах. Хан и Лея Органа-Соло оказываются в заточении на планете, чьи власти готовы сдаться на милость юужань-вонгов и передать в их руки джедайских мятежников, лишь бы избежать уничтожения.
+
+            На Корусанте Люк и Мара Джейд Скайуокер делают шокирующее открытие, благодаря которому юужань-вонги не могут установить свой тотальный контроль над планетой. Но враг находит их, и Люк с Марой вынуждены включиться в схватку, шансы победить в которой ничтожно малы. А в космосе кипит иная битва, способная решить судьбу Новой Республики — и всех джедаев разом…</p>
+        <div class="button-container">
+          <form action="https://libcat.ru/knigi/fantastika-i-fjentezi/boevaya-fantastika/290981-aaron-olston-v-tylu-vraga-2-myatezhnaya-stojkost.html">
+            <button class="lngbtn">ЧИТАТЬ</button>
+          </form>
+          <form action="https://bookscafe.net/book/olston_aaron-v_tylu_vraga_2_myatezhnaya_stoykost-173057.html">
+            <button class="lngbtn">СКАЧАТЬ</button>
+          </form>
+        </div>
+    </div>
+    </div>
+  </section>
+  <section id="section13">
+    <div class="book-content">
+      <div class="image-section">
+        <img src="../books/nod13.jpg" alt="Описание картинки" />
+    </div>
+    <div class="text-section">
+        <h2>ИЗМЕННИК</h2>
+        <p>На грани катастрофы — луч надежды!
+
+            Неприступная твердыня Новой Республики — Корусант — пала! Истерзанная войной галактика рискует никогда больше не подняться с колен… Но и в такой, казалось бы, безвыходной ситуации есть место чуду: Джейсен Соло жив! Однако он и представить себе не мог, что его ждет…
+            
+            Юный рыцарь-джедай попадает под надзор Вержер — таинственного существа, чьи истинные намерения скрыты под завесой тайны, а открыт лишь один путь — путь жестокости. Но и научиться у загадочной наставницы юный джедай может многому: ведь в ее руках ключ к новому пониманию Силы, новому уровню ее осмысления — опасному, яркому, смертоносному…
+            
+            Попав в плохие руки, это знание может стать опустошительным оружием. Тем временем есть и другие — и помимо Вержер — кто внимательно наблюдает за прогрессом Джейсена. Они ждут своего часа — момента, когда можно будет предъявить на джедая свои права. Но что бы ни случилось, какой бы путь не избрал Джейсен — света или тьмы — ясно одно: он никогда больше не будет тем джедаем, каким был прежде…</p>
+        <div class="button-container">
+          <form action="https://libcat.ru/knigi/fantastika-i-fjentezi/epicheskaya-fantastika/329994-metyu-stover-novyj-orden-dzhedaev-izmennik.html">
+            <button class="lngbtn">ЧИТАТЬ</button>
+          </form>
+          <form action="https://bookscafe.net/book/stover_metyu-novyy_orden_dzhedaev_izmennik-21582.html">
+            <button class="lngbtn">СКАЧАТЬ</button>
+          </form>
+        </div>
+    </div>
+    </div>
+  </section>
+  <section id="section14">
+    <div id="right-book" class="book-content">
+      <div class="image-section">
+        <img src="../books/nod14.jpg" alt="Описание картинки" />
+    </div>
+    <div class="text-section">
+        <h2>ПУТЬ СУДЬБЫ</h2>
+        <p>В противостоянии с безжалостными юужань-вонгами наступает временное затишье. Корусант пал, и Новая Республика канула в лету. Но ее герои — Люк, Мара, Лея, Хан, их дети и собратья по оружию — продолжают сражаться, несмотря на катастрофическое неравенство сил. И интрига закручивается по новой: стартует бешеная гонка за президентское кресло, юужань-вонгские шпионы замышляют политическое убийство, а Люк Скайуокер готов возродить Совет джедаев, которому помимо всего прочего предстоит решать вопрос с загадочной Вержер — рыцарем-джедаем из далекого прошлого, чья лояльность вызывает сомнения.
+
+            И в этот момент политические фракции, стоящие в оппозиции Ордену, готовы явить миру новое орудие террора, способное истребить всю расу юужань-вонгов. Оппозицию нужно остановить, иначе Республика станет тем, против чего она всегда сражалась, а галактику накроет саван Тёмной стороны…'</p>
+        <div class="button-container">
+          <form action="https://libcat.ru/knigi/fantastika-i-fjentezi/epicheskaya-fantastika/291027-uolter-uilyams-put-sudby.html">
+            <button class="lngbtn">ЧИТАТЬ</button>
+          </form>
+          <form action="https://bookscafe.net/book/uilyams_uolter-put_sudby-88210.html">
+            <button class="lngbtn">СКАЧАТЬ</button>
+          </form>
+        </div>
+    </div>
+    </div>
+  </section>
+  <section id="section15">
+    <div class="book-content">
+      <div class="image-section">
+        <img src="../books/nod15.jpg" alt="Описание картинки" />
+    </div>
+    <div class="text-section">
+        <h2>ЕРЕТИК СИЛЫ 1: ОБЛОМКИ</h2>
+        <p>Из пепла Новой Республики, павшей под ударами жестоких юужань-вонгов, поднялся Галактический Альянс — новое образование, способное привнести в галактику мир. Но в первую очередь необходимо раз и навсегда покончить с угрозой юужань-вонгов. Люк Скайуокер отправляется на поиски легенды — Зонамы-Секот, разумной планеты, которой несколько десятилетий назад, по слухам, удалось дать отпор юужань-вонгскому вторжению. И есть шанс, что разгадка тайн Зонамы-Секот наконец положит конец затянувшейся войне.
+
+            Люк, Мара, Джейсен Соло и другие джедаи на борту «Тени Джейд» направляются в Неизведанные Регионы, где, по слухам, в последний раз видели бродячую планету. Но поиски лишь начались, а героям уже приходится вступать в жестокую схватку. юужань-вонги теснят силы Имперского Остатка, и последний оплот Империи вот-вот может быть взять. Казалось бы, пассажирам «Тени Джейд» ничего не остаётся, кроме как оставить имперцев на произвол судьбы. Но они не заурядные путешественники, они — джедаи…</p>
+        <div class="button-container">
+          <form action="https://libcat.ru/knigi/fantastika-i-fjentezi/boevaya-fantastika/13166-shon-uilyams-eretik-sily-1-ostatok.html">
+            <button class="lngbtn">ЧИТАТЬ</button>
+          </form>
+          <form action="https://bookscafe.net/book/uilyams_shon-eretik_sily_1_oblomki-88212.html">
+            <button class="lngbtn">СКАЧАТЬ</button>
+          </form>
+        </div>
+    </div>
+    </div>
+  </section>
+  <section id="section16">
+    <div id="right-book" class="book-content">
+      <div class="image-section">
+        <img src="../books/nod16.jpg" alt="Описание картинки" />
+    </div>
+    <div class="text-section">
+        <h2>ЕРЕТИК СИЛЫ 2: ОБЕЗДОЛЕННЫЕ</h2>
+        <p>В поисках Зонамы-Секот — разумной планеты, способной положить конец затянувшейся войне с юужань-вонгами, — Люк Скайуокер и его джедаи углубляются в Неизведанные Регионы — область космоса, полную тайн и опасностей.
+
+            А тем временем на другом конце галактики, в сердце союзных территорий, стараниями юужань-вонгов пробуждается от спячки давно забытый враг Новой Республики, жаждущий устроить вендетту. И Хан с Леей, мечтающие объединить расколотую галактику, отправляются прямиком в его лапы — в паутину предательства и обмана…</p>
+        <div class="button-container">
+          <form action="https://libcat.ru/knigi/fantastika-i-fjentezi/boevaya-fantastika/322688-shon-uilyams-eretik-sily-2-obezdolennye.html">
+            <button class="lngbtn">ЧИТАТЬ</button>
+          </form>
+          <form action="https://bookscafe.net/book/uilyams_shon-eretik_sily_2_obezdolennye-148354.html">
+            <button class="lngbtn">СКАЧАТЬ</button>
+          </form>
+        </div>
+    </div>
+    </div>
+  </section>
+  <section id="section17">
+    <div class="book-content">
+      <div class="image-section">
+        <img src="../books/nod17.jpg" alt="Описание картинки" />
+    </div>
+    <div class="text-section">
+        <h2>ЕРЕТИК СИЛЫ 3: ОБЪЕДИНЕНИЕ</h2>
+        <p>Джедаи приближаются еще на шаг к спасению растерзанной войной галактики — но наградой за их усилия станет новая мощная волна сопротивления…
+
+            Мучительные поиски Зонамы-Секот, наконец, окончены — экспедиция Люка Скайуокер, Джейсена Соло и их товарищей на «Тени Джейд» увенчалась успехом. Но радость сменяется тревогой, когда разумная планета делает решительное заявление: она отказывается возвращаться в галактику, полную войн, рабства и горя.
+            
+            В то время как Люк лихорадочно пытается убедить неуловимую планету изменить свое решение, юужань-вонги начинают полномасштабную атаку, нацеленную в сердце нового альянса. Отправленные на защиту крупного узла связи, Хан и Лея обнаруживают, что силы несопоставимы. Подмога слишком далеко — когда она придет, все уже будет кончено. Отважную чету ждет бой с ничтожными шансами на успех. Выживут ли они — другой вопрос…
+            
+            </p>
+        <div class="button-container">
+          <form action="https://libcat.ru/knigi/fantastika-i-fjentezi/boevaya-fantastika/322692-shon-uilyams-eretik-sily-3-obedinenie.html">
+            <button class="lngbtn">ЧИТАТЬ</button>
+          </form>
+          <form action="https://bookscafe.net/book/uilyams_shon-eretik_sily_3_obedinenie-88214.html">
+            <button class="lngbtn">СКАЧАТЬ</button>
+          </form>
+        </div>
+    </div>
+    </div>
+  </section>
+  <section id="section18">
+    <div id="right-book" class="book-content">
+      <div class="image-section">
+        <img src="../books/nod18.jpg" alt="Описание картинки" />
+    </div>
+    <div class="text-section">
+        <h2>ПОСЛЕДНЕЕ ПРОРОЧЕСТВО</h2>
+        <p>Зонама-Секот является ключом к окончанию кровавой войны между Галактическим Альянсом и захватчиками юужань-вонгами. В то время как Люк Скайуокер заключает союз с живой планетой, юужань-вонгам удаётся похитить один из созданных на ней живых кораблей и доставить его для изучения Нен Йим. Её исследования раскрывают не только тайны живой планеты, но и давно забытые секреты самих юужань-вонгов.
+
+            В это же время генерал Ведж Антиллес начинает кампанию по захвату Билбринджи, которая оборачивается катастрофой. Теперь он должен полагаться лишь на свою хитрость и смекалку, чтобы завершить одну из самых опасных и важных миссий за всю историю Альянса.</p>
+        <div class="button-container">
+          <form action="https://libcat.ru/knigi/fantastika-i-fjentezi/boevaya-fantastika/22195-greg-kejes-poslednee-prorochestvo.html">
+            <button class="lngbtn">ЧИТАТЬ</button>
+          </form>
+          <form action="https://bookscafe.net/book/keyes_greg-poslednee_prorochestvo-257334.html">
+            <button class="lngbtn">СКАЧАТЬ</button>
+          </form>
+        </div>
+    </div>
+    </div>
+  </section>
+  <section id="section19">
+    <div class="book-content">
+      <div class="image-section">
+        <img src="../books/nod19.jpg" alt="Описание картинки" />
+    </div>
+    <div class="text-section">
+        <h2>ЕДИНАЯ СИЛА</h2>
+        <p>С трудом одержанные победы не гарантировали Галактическому Альянсу окончательного триумфа в войне с юужань-вонгами — и фортуна вновь стала благоволить агрессорам, в погоне за тотальным господством над галактикой продвинувшимся в самые глубины её территорий. Отдельные очаги сопротивления ещё пытаются образовать единый фронт… Но фигуры расставлены, и конец игры по-настоящему близок.
+
+            В то время как Люк и его спутники из последних сил пытаются убедить живую планету Зонаму-Секот выступить на стороне джедаев в борьбе с юужань-вонгами, одинокая космическая станция — вот единственное, что стоит между последним оплотом Альянса и безжалостными захватчиками, полными решимости окончательно и бесповоротно подавить оборону противника. Слишком многое уже принесено в жертву… и слишком многое стоит на кону, чтобы в последний момент отступить. Полная победа над врагом близка… но так же близко и полное крушение надежд.
+            
+            В зрелищном финале книжного цикла «Новый Орден джедаев» Люк Скайуокер, Хан Соло, Лея Органа-Соло, их дети и их соратники по Галактическому Альянсу выходят на решающий бой с противником, который угрожает не только галактике, но и самой Силе!</p>
+        <div class="button-container">
+          <form action="https://libcat.ru/knigi/fantastika-i-fjentezi/boevaya-fantastika/347284-dzhejms-lucheno-novyj-orden-dzhedaev-edinaya-sila.html">
+            <button class="lngbtn">ЧИТАТЬ</button>
+          </form>
+          <form action="https://bookscafe.net/book/lucheno_dzheyms-novyy_orden_dzhedaev_edinaya_sila-6201.html">
+            <button class="lngbtn">СКАЧАТЬ</button>
+          </form>
+        </div>
+    </div>
+    </div>
+  </section>
+  <foter style="margin: 5vh;"></foter>
+</body>
+</html>

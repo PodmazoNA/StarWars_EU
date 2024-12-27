@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<link rel="stylesheet" href="../star_style.css">
+<head>
+<style>
+    body{
+        background-color: rgb(22, 8, 52);
+    }
+    h1{
+      font-size: clamp(30px, 3.5vw, 60px);
+      text-align: center;
+      margin-bottom: -1vh;
+      color: yellow;
+    }
+</style>
+</head>
+
+<body>
+    <script>
+        let isDrawing = false;
+        let elements = [];
+        
+        document.addEventListener('dblclick', function(e) {
+          isDrawing = !isDrawing; // Переключаем состояние рисования
+          if (isDrawing) {
+            document.addEventListener('mousemove', drawElement);
+          } else {
+            document.removeEventListener('mousemove', drawElement);
+          }
+        });
+        
+        function drawElement(e) {
+          const element = document.createElement('div');
+          element.classList.add('draw-element');
+          element.style.left = e.pageX + 'px';
+          element.style.top = e.pageY + 'px';
+          document.body.appendChild(element);
+          elements.push(element);
+          setTimeout(() => {
+            element.classList.add('fade-out');
+            setTimeout(() => {
+              document.body.removeChild(element);
+          }, 500);
+          }, 3000);
+        }
+    </script>
+    <h1 id="manybooks">ПОД ПОКРОВОМ ЛЖИ</h1>
+    <section id="section1">
+    <div class="book-content">
+      <div class="image-section">
+          <img src="../books/lie.jpg" alt="Описание картинки" />
+      </div>
+      <div class="text-section">
+          <p>Считанные дни до осады Набу. Боевой флот Торговой Федерации во главе с вице-королем Нуте Гунраем готов осадить солнечный мир набу и гунганов.
+            Галактическая Республика в чудовищном кризисе. На Корусканте, центре цивилизованного пространства, несмотря на все усилия верховного канцлера Валорума, Сенат поражен алчностью и коррупцией. В отдаленных уголках Галактики все торговые пути контролируют гигантские станции набирающей силу Торговой Федерации.
+            Но теперь даже Торговая Федерация оказалась под перекрестным огнем — пираты и рейдеры нападают на ее корабли, а террористы требуют положить конец торговой тирании.
+            Для тех, кто борется за сохранение Республики, настало время испытаний. Последняя надежда Галактики на рыцарей-джедаев — вечных хранителей мира и справедливости. Один из лучших рыцарей Куай-Гон Джинн вместе со своим учеником Оби-Ван Кеноби оказываются в ключевой точке катастрофы Галактической Республики...
+            Сенаторы Кос Палпатин и Бэйл Органа, магистр Йода и канцлер Валорум, правители Торговой Федерации Нуте Гунрай и Даултай Дофайн в преддверии Первого Эпизода Звездных Войн!</p>
+          <div class="button-container">
+            <form action="https://libcat.ru/knigi/fantastika-i-fjentezi/boevaya-fantastika/236706-dzhejms-lucheno-pod-pokrovom-lzhi.html">
+              <button class="lngbtn">ЧИТАТЬ</button>
+            </form>
+            <form action="https://bookscafe.net/book/lucheno_dzheyms-star_wars_pod_pokrovom_lzhi-70674.html?ysclid=m437gy7peq781005797">
+              <button class="lngbtn">СКАЧАТЬ</button>
+            </form>
+          </div>
+      </div>
+    </div>
+  </section>
+  <foter style="margin-bottom: 5vh;"></foter>
+</body>
+</html>

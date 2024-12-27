@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<link rel="stylesheet" href="../star_style.css">
+<head>
+<style>
+    body{
+        background-color: rgb(22, 8, 52);
+    }
+    h1{
+      font-size: clamp(30px, 3.5vw, 60px);
+      text-align: center;
+      margin-bottom: -1vh;
+      color: yellow;
+    }
+</style>
+</head>
+
+<body>
+    <script>
+        let isDrawing = false;
+        let elements = [];
+        
+        document.addEventListener('dblclick', function(e) {
+          isDrawing = !isDrawing; // Переключаем состояние рисования
+          if (isDrawing) {
+            document.addEventListener('mousemove', drawElement);
+          } else {
+            document.removeEventListener('mousemove', drawElement);
+          }
+        });
+        
+        function drawElement(e) {
+          const element = document.createElement('div');
+          element.classList.add('draw-element');
+          element.style.left = e.pageX + 'px';
+          element.style.top = e.pageY + 'px';
+          document.body.appendChild(element);
+          elements.push(element);
+          setTimeout(() => {
+            element.classList.add('fade-out');
+            setTimeout(() => {
+              document.body.removeChild(element);
+          }, 500);
+          }, 3000);
+        }
+    </script>
+    <h1 id="manybooks">ДИЛОГИЯ</h1>
+    <section id="section1">
+    <div class="book-content">
+      <div class="image-section">
+          <img src="../books/delo.jpg" alt="Описание картинки" />
+      </div>
+      <div class="text-section">
+          <h2>ДЕЛО ЧЕСТИ</h2>
+          <p>Новая книга Тимоти Зана возвращает нас во времена Восстания. Люк Скайуокер еще не стал джедаем, Хан Соло не решается завязать с контрабандой и присоединиться к Альянсу, а Лея Органа остается принцессой Восстания, которая приходит в бешенство при виде капитана Соло. Император считает молодую Мару Джейд одним из наиболее перспективных агентов, а Империю предают собственные солдаты. Небольшая группа штурмовиков — «Рука правосудия» — отказывается подчиняться Палпатину и начинает свой собственный крестовый поход против сил зла, чтобы восстановить справедливость...</p>
+          <div class="button-container">
+            <form action="https://iknigi.net/avtor-timoti-zan/180442-zvezdnye-voyny-delo-chesti-timoti-zan.html">
+              <button class="lngbtn">ЧИТАТЬ</button>
+            </form>
+            <form action="https://royallib.com/book/zan_timoti/delo_chesti.html?ysclid=m433w53jfw942171259">
+              <button class="lngbtn">СКАЧАТЬ</button>
+            </form>
+          </div>
+      </div>
+    </div>
+  </section>
+<section id="section2">
+    <div id="right-book" class="book-content">
+      <div class="image-section">
+        <img src="../books/igra.jpg" alt="Описание картинки" />
+    </div>
+    <div class="text-section">
+        <h2>ИГРА ВСЛЕПУЮ</h2>
+        <p>Судьба Восстания зависит от следующего шага Люка Скайуокера. Но куда попали Повстанцы – в надёжное убежище или в смертельную ловушку?
+
+            <br><br>Спустя восемь месяцев после битвы при Явине Восстание отчаянно нуждается в новой базе, поэтому, когда губернатор Ферроуз, управляющий сектором Кандорас, предлагает Повстанцам союз – он готов предоставить им убежище в обмен на защиту от чужака-военачальника по имени Нузо Эсва, – Люк, Лея, Хан и Чуи летят оценить возможную сделку.
+            
+            <br>В Кандорас также отправляется Мара Джейд, Рука Императора, в сопровождении пятерых штурмовиков-дезертиров, называющих свой отряд «Рукой правосудия». Их цель: покарать предателя Ферроуза и навсегда покончить с Повстанцами.
+            
+            В этой коварной игре предательств внутри предательств ждёт своего часа "тёмная лошадка".</p>
+        <div class="button-container">
+          <form action="https://libcat.ru/knigi/fantastika-i-fjentezi/kosmicheskaya-fantastika/403848-timoti-zan-igra-vslepuyu.html">
+            <button class="lngbtn">ЧИТАТЬ</button>
+          </form>
+          <form action="https://royallib.com/book/zan_timoti/igra_vslepuyu.html?ysclid=m43401p2r177215983">
+            <button class="lngbtn">СКАЧАТЬ</button>
+          </form>
+        </div>
+    </div>
+    </div>
+  </section>
+  <foter style="margin-bottom: 5vh;"></foter>
+</body>
+</html>

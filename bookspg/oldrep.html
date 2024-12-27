@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<link rel="stylesheet" href="../star_style.css">
+<head>
+<style>
+    body{
+        background-color: rgb(22, 8, 52);
+    }
+    h1{
+      font-size: clamp(30px, 3.5vw, 60px);
+      text-align: center;
+      margin-bottom: -1vh;
+      color: yellow;
+    }
+</style>
+</head>
+
+<body>
+    <script>
+        let isDrawing = false;
+        let elements = [];
+        
+        document.addEventListener('dblclick', function(e) {
+          isDrawing = !isDrawing; // Переключаем состояние рисования
+          if (isDrawing) {
+            document.addEventListener('mousemove', drawElement);
+          } else {
+            document.removeEventListener('mousemove', drawElement);
+          }
+        });
+        
+        function drawElement(e) {
+          const element = document.createElement('div');
+          element.classList.add('draw-element');
+          element.style.left = e.pageX + 'px';
+          element.style.top = e.pageY + 'px';
+          document.body.appendChild(element);
+          elements.push(element);
+          setTimeout(() => {
+            element.classList.add('fade-out');
+            setTimeout(() => {
+              document.body.removeChild(element);
+          }, 500);
+          }, 3000);
+        }
+    </script>
+    <h1 id="manybooks">СТАРАЯ РЕСПУБЛИКА</h1>
+    <section id="section1">
+    <div class="book-content">
+      <div class="image-section">
+          <img src="../books/old1.jpg" alt="Описание картинки" />
+      </div>
+      <div class="text-section">
+          <h2>РОКОВОЙ АЛЬЯНС</h2>
+          <p>Тассаа Бариш, матриарх хаттского криминального картеля, объявляет аукцион, взбудораживший всю Галактику На торгах присутствуют представители как Республики, так и Империи ситхов. Здесь и джедай-падаван, которому поручено следить за ситуацией; и бывшая спецназовка, с позором уволенная из элитного отделения «Черные звезды»; и таинственный мандалорец, преследующий собственные цели. При этом посол Республики вовсе не тот, кем его считают, а делегацией Империи заправляет безжалостная ученица ситха. Падаван хочет во что бы то ни стало поступить правильно и боится провалить задание; спецназовка рассчитывает вернуть себе доброе имя, а мандалорец каким-то образом постоянно умудряется быть на шаг впереди их всех.
+            И никто из гостей - приглашенных или незваных - на самом деле не собирается участвовать в торгах. Все планируют выкрасть лот, запертый в неприступном хранилище: два обгорелых обломка взорванного крейсера, один из которых, возможно, хранит ключ к богатствам целой планеты. Но с этим сокровищем неразрывно связана чудовищная опасность. И чтобы совладать с ней, ситхам и джедаям, республиканцам и имперцам придется совершить немыслимое - объединить усилия...</p>
+          <div class="button-container">
+            <form action="https://libcat.ru/knigi/fantastika-i-fjentezi/kosmicheskaya-fantastika/403849-shon-uilyams-staraya-respublika-rokovoj-alyans.html">
+              <button class="lngbtn">ЧИТАТЬ</button>
+            </form>
+            <form action="https://royallib.com/book/uilyams_shon/staraya_respublika_rokovoy_alyans.html">
+              <button class="lngbtn">СКАЧАТЬ</button>
+            </form>
+          </div>
+      </div>
+    </div>
+  </section>
+<section id="section2">
+    <div id="right-book" class="book-content">
+      <div class="image-section">
+        <img src="../books/old2.jpg" alt="Описание картинки" />
+    </div>
+    <div class="text-section">
+        <h2>ОБМАНУТЫЕ</h2>
+        <p>Наше время пришло.
+            Три сотни лет мы готовились; становились сильнее,
+            пока вы дремали в вашей колыбели власти,
+            веря, что ваш народ в безопасности и под защитой.
+            <br><br>Вам доверили вести Республику,
+            Но вы были обмануты,
+            Мощь Тёмной стороны ослепила вас…
+            Вы были обмануты и теперь
+            <br><br>Ваша Республика падет.</p>
+        <div class="button-container">
+          <form action="https://libcat.ru/knigi/fantastika-i-fjentezi/epicheskaya-fantastika/233262-pol-kemp-staraya-respublika-obmanutye.html">
+            <button class="lngbtn">ЧИТАТЬ</button>
+          </form>
+          <form action="https://bookscafe.net/book/kemp_pol-staraya_respublika_obmanutye-217323.html">
+            <button class="lngbtn">СКАЧАТЬ</button>
+          </form>
+        </div>
+    </div>
+    </div>
+  </section>
+  <section id="section3">
+    <div class="book-content">
+      <div class="image-section">
+        <img src="../books/old3.jpg" alt="Описание картинки" />
+    </div>
+    <div class="text-section">
+        <h2>РЕВАН</h2>
+        <p>Там что-то есть: неодолимая сила, которая надвигается, чтобы сокрушить Республику – если только один джедай, изгнанный и проклятый, не сможет остановить ее.
+
+            <br>Реван: герой, предатель, враг, завоеватель, спаситель. Джедай, который покинул Корусант, чтобы победить мандалорцев – и вернулся последователем темной стороны со стремлением уничтожить Республику. Совет джедаев вернул Ревану жизнь, но цена искупления оказалась высокой. Его воспоминания были стерты. Все, что осталось, это кошмары – и глубокий, неизменный страх.
+            
+            <br>Что же случилось там, за пределами Внешнего Кольца? Реван никак не мог вспомнить, но и полностью забыть он тоже не мог. Каким-то образом он наткнулся на страшную тайну, которая угрожает самому существованию Республики. Реван не знает, что это и как с этим бороться, и его вполне может постигнуть неудача, ибо он еще никогда не встречался с более могущественным и коварным врагом. Но только смерть сможет пресечь его попытки.</p>
+        <div class="button-container">
+          <form action="https://libcat.ru/knigi/fantastika-i-fjentezi/geroicheskaya-fantastika/229635-dryu-karpishin-staraya-respublika-revan.html">
+            <button class="lngbtn">ЧИТАТЬ</button>
+          </form>
+          <form action="https://bookscafe.net/book/dryu_karpishin-staraya_respublika_revan-220158.html">
+            <button class="lngbtn">СКАЧАТЬ</button>
+          </form>
+        </div>
+    </div>
+    </div>
+  </section>
+  <section id="section4">
+    <div id="right-book" class="book-content">
+      <div class="image-section">
+        <img src="../books/old4.jpg" alt="Описание картинки" />
+    </div>
+    <div class="text-section">
+        <h2>ИСТРЕБЛЕНИЕ</h2>
+        <p>Империя ситхов погружена в хаос. Пропавший Император объявлен мёртвым, а попытка амбициозного Дарта Малгуса узурпировать власть не увенчалась успехом. Однако нестабильная политическая обстановка нисколько не умаляет решимости Дарт Каррид, командующей «Копьём власти», самым мощным кораблём Империи, завоевать Галактику.
+
+            Однако дорогу к этой великой цели ей перешёл более чем достойный противник – агент Республики Терон Шан, у которого с Империей давние счёты. Столкновение этих двух незаурядных личностей может кардинально изменить ход текущей войны. Пусть Шан не владеет Силой, зато он унаследовал мятежный дух своей матери, гранд-мастера Ордена джедаев, а кроме того, ему не впервой ломать планы Империи по созданию супероружия. Поэтому именно ему Орден поручает опасное задание – выследить и уничтожить «Копьё власти».
+            
+            В этой миссии к Терону присоединятся лихая контрабандистка Тефф'ит и мастер-джедай Ност-Дюрал, когда-то бывший наставником Дарт Каррид. Вместе им предстоит выступить против закалённой в боях команды самых хладнокровных последователей Тёмной стороны. Времени в обрез, шанс на победу только один, а гибельных путей – тысячи…</p>
+        <div class="button-container">
+          <form action="https://libcat.ru/knigi/fantastika-i-fjentezi/kiberpank/403525-dryu-karpishin-staraya-respublika-unichtozhenie.html">
+            <button class="lngbtn">ЧИТАТЬ</button>
+          </form>
+          <form action="https://royallib.com/book/dryu_karpishin/unichtogenie.html">
+            <button class="lngbtn">СКАЧАТЬ</button>
+          </form>
+        </div>
+    </div>
+    </div>
+  </section>
+  <foter style="margin: 5vh;"></foter>
+</body>
+</html>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<link rel="stylesheet" href="../star_style.css">
+<head>
+<style>
+    body{
+        background-color: rgb(22, 8, 52);
+    }
+    h1{
+      font-size: clamp(30px, 3.5vw, 60px);
+      text-align: center;
+      margin-bottom: -1vh;
+      color: yellow;
+    }
+</style>
+</head>
+
+<body>
+    <script>
+        let isDrawing = false;
+        let elements = [];
+        
+        document.addEventListener('dblclick', function(e) {
+          isDrawing = !isDrawing; // Переключаем состояние рисования
+          if (isDrawing) {
+            document.addEventListener('mousemove', drawElement);
+          } else {
+            document.removeEventListener('mousemove', drawElement);
+          }
+        });
+        
+        function drawElement(e) {
+          const element = document.createElement('div');
+          element.classList.add('draw-element');
+          element.style.left = e.pageX + 'px';
+          element.style.top = e.pageY + 'px';
+          document.body.appendChild(element);
+          elements.push(element);
+          setTimeout(() => {
+            element.classList.add('fade-out');
+            setTimeout(() => {
+              document.body.removeChild(element);
+          }, 500);
+          }, 3000);
+        }
+    </script>
+    <h1 id="manybooks">ДАРТ ПЛЭГАС</h1>
+    <section id="section1">
+    <div class="book-content">
+      <div class="image-section">
+          <img src="../books/plagg.jpg" alt="Описание картинки" />
+      </div>
+      <div class="text-section">
+          <p>Дарт Плэгас: один из самых гениальных лордов ситхов всех времен. Он жаждет одного: обладать властью. И боится тоже одного: потерять её. Став учеником, он перенимает брутальные методы ситхов. И, когда приходит время, убивает учителя — но клянётся, что его самого такая судьба не постигнет. Ибо, как ни один другой последователь тёмной стороны, Дарт Плэгас овладел абсолютной властью… над жизнью и смертью.
+
+            <br>Дарт Сидиус: ученик, которого выбрал Плэгас. Под руководством учителя он тайно изучает искусства ситхов, одновременно делая публичную карьеру и поднимаясь по галактической лестнице власти — становясь сперва сенатором, затем Верховным канцлером и, в конце концов, Императором.
+            
+            <br>Дарт Плэгас и Дарт Сидиус, учитель и его помощник, намерены захватить власть в галактике — и уничтожить Орден джедаев. Но смогут ли они нарушить безжалостную традицию ситхов? Или желание одного быть абсолютным правителем, а другого — жить вечно, посеет семена их гибели?</p>
+          <div class="button-container">
+            <form action="https://libcat.ru/knigi/fantastika-i-fjentezi/kosmicheskaya-fantastika/203789-dzhejms-luseno-dart-plegas.html">
+              <button class="lngbtn">ЧИТАТЬ</button>
+            </form>
+            <form action="https://bookscafe.net/book/luseno_dzheyms-dart_plegas-241712.html?ysclid=m432psvcic578324198">
+              <button class="lngbtn">СКАЧАТЬ</button>
+            </form>
+          </div>
+      </div>
+    </div>
+  </section>
+  <foter style="margin-bottom: 5vh;"></foter>
+</body>
+</html>

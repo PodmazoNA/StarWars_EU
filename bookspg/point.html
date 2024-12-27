@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<link rel="stylesheet" href="../star_style.css">
+<head>
+<style>
+    body{
+        background-color: rgb(22, 8, 52);
+    }
+    h1{
+      font-size: clamp(30px, 3.5vw, 60px);
+      text-align: center;
+      margin-bottom: -1vh;
+      color: yellow;
+    }
+</style>
+</head>
+
+<body>
+    <script>
+        let isDrawing = false;
+        let elements = [];
+        
+        document.addEventListener('dblclick', function(e) {
+          isDrawing = !isDrawing; // Переключаем состояние рисования
+          if (isDrawing) {
+            document.addEventListener('mousemove', drawElement);
+          } else {
+            document.removeEventListener('mousemove', drawElement);
+          }
+        });
+        
+        function drawElement(e) {
+          const element = document.createElement('div');
+          element.classList.add('draw-element');
+          element.style.left = e.pageX + 'px';
+          element.style.top = e.pageY + 'px';
+          document.body.appendChild(element);
+          elements.push(element);
+          setTimeout(() => {
+            element.classList.add('fade-out');
+            setTimeout(() => {
+              document.body.removeChild(element);
+          }, 500);
+          }, 3000);
+        }
+    </script>
+    <h1 id="manybooks">УЯЗВИМАЯ ТОЧКА</h1>
+    <section id="section1">
+    <div class="book-content">
+      <div class="image-section">
+          <img src="../books/point.jpg" alt="Описание картинки" />
+      </div>
+      <div class="text-section">
+          <p>Мейс Винду - живая легенда. Магистр, член Совета, умелый дипломат, тренированный воин. Многие утверждают, что среди живых он - самый смертоносный человек. Но он - человек мира, а сейчас, впервые за многие годы, Галактика охвачена войной...
+            <br>...Знаменитая битва на Геонозисе положила начало войны клонов. И Мастеру Винду придется предпринять опасное путешествие на родную планету Харуун Кэл, чтобы предотвратить катастрофический кризис в Республике... Но здесь, в родном мире, он сталкивается со странной тайной.
+            <br>И Винду вынужден оставить Республику, которой искренно служит, цивилизацию, в которую верит, отринуть все, кроме жажды мира и долга перед своим бывшим падаваном. И узнать цену, которую должны заплатить все хранители мира, вынужденные вести войну... Магистр Мейс Винду и его бывшая ученица Депа Биллаба, сопровождаемые войском клонов, во Вселенной Звездных Войн!</p>
+          <div class="button-container">
+            <form action="https://libcat.ru/knigi/fantastika-i-fjentezi/epicheskaya-fantastika/10532-metyu-stover-star-wars-uyazvimaya-tochka.html">
+              <button class="lngbtn">ЧИТАТЬ</button>
+            </form>
+            <form action="https://bookscafe.net/book/stover_metyu-star_wars_uyazvimaya_tochka-74894.html?ysclid=m4374vtxw238424207">
+              <button class="lngbtn">СКАЧАТЬ</button>
+            </form>
+          </div>
+      </div>
+    </div>
+  </section>
+  <foter style="margin-bottom: 5vh;"></foter>
+</body>
+</html>

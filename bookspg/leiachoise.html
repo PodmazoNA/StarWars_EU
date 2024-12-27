@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<link rel="stylesheet" href="../star_style.css">
+<head>
+<style>
+    body{
+        background-color: rgb(22, 8, 52);
+    }
+    h1{
+      font-size: clamp(30px, 3.5vw, 60px);
+      text-align: center;
+      margin-bottom: -1vh;
+      color: yellow;
+    }
+</style>
+</head>
+
+<body>
+    <script>
+        let isDrawing = false;
+        let elements = [];
+        
+        document.addEventListener('dblclick', function(e) {
+          isDrawing = !isDrawing; // Переключаем состояние рисования
+          if (isDrawing) {
+            document.addEventListener('mousemove', drawElement);
+          } else {
+            document.removeEventListener('mousemove', drawElement);
+          }
+        });
+        
+        function drawElement(e) {
+          const element = document.createElement('div');
+          element.classList.add('draw-element');
+          element.style.left = e.pageX + 'px';
+          element.style.top = e.pageY + 'px';
+          document.body.appendChild(element);
+          elements.push(element);
+          setTimeout(() => {
+            element.classList.add('fade-out');
+            setTimeout(() => {
+              document.body.removeChild(element);
+          }, 500);
+          }, 3000);
+        }
+    </script>
+    <h1 id="manybooks">ВЫБОР ПРИНЦЕССЫ ЛЕИ</h1>
+    <section id="section1">
+    <div class="book-content">
+      <div class="image-section">
+          <img src="../books/prleia.jpg" alt="Описание картинки" />
+      </div>
+      <div class="text-section">
+          <p>После битвы при Эндоре и гибели Императора прошло четыре года. Миновали первые годы пьянящей победы. В Галактике разразилась гражданская война. Новая Республика вынуждена теперь сражаться не только с Империей, сохранившей своё военное могущество, но и с самозваным военачальником Зинджем. Он основал свою базу на Датомире — планете, где живут и воспитываются знаменитые датомирские ведьмы, способные при помощи заклинаний направлять Великую Силу. Оказавшись в их городе, принцесса Лея ищет богатых и обладающих властью союзников, чтобы продолжить борьбу, и готова отдать за такую помощь слишком много…
+
+            <br>Генерал Новой Республики Хан Соло и принцесса Лея, Люк Скайуокер и принц Изольдер Хейпанский, вечные спутники R2-D2 и C-3PO, королева-мать Та'а Чуме и военачальник Зиндж в мире датомирских ведьм через четыре года после шестого эпизода Звёздных войн!</p>
+          <div class="button-container">
+            <form action="https://libcat.ru/knigi/fantastika-i-fjentezi/boevaya-fantastika/16811-dejv-volverton-vybor-princessy-leji.html">
+              <button class="lngbtn">ЧИТАТЬ</button>
+            </form>
+            <form action="https://bookscafe.net/book/volverton_deyv-vybor_princessy_leyi-83786.html?ysclid=m433fmh1f7109301915">
+              <button class="lngbtn">СКАЧАТЬ</button>
+            </form>
+          </div>
+      </div>
+    </div>
+  </section>
+  <foter style="margin-bottom: 5vh;"></foter>
+</body>
+</html>

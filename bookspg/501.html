@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<link rel="stylesheet" href="../star_style.css">
+<head>
+<style>
+    body{
+        background-color: rgb(22, 8, 52);
+    }
+    h1{
+      font-size: clamp(30px, 3.5vw, 60px);
+      text-align: center;
+      margin-bottom: -1vh;
+      color: yellow;
+    }
+</style>
+</head>
+
+<body>
+    <script>
+        let isDrawing = false;
+        let elements = [];
+        
+        document.addEventListener('dblclick', function(e) {
+          isDrawing = !isDrawing; // Переключаем состояние рисования
+          if (isDrawing) {
+            document.addEventListener('mousemove', drawElement);
+          } else {
+            document.removeEventListener('mousemove', drawElement);
+          }
+        });
+        
+        function drawElement(e) {
+          const element = document.createElement('div');
+          element.classList.add('draw-element');
+          element.style.left = e.pageX + 'px';
+          element.style.top = e.pageY + 'px';
+          document.body.appendChild(element);
+          elements.push(element);
+          setTimeout(() => {
+            element.classList.add('fade-out');
+            setTimeout(() => {
+              document.body.removeChild(element);
+          }, 500);
+          }, 3000);
+        }
+    </script>
+    <h1 id="manybooks">ИМПЕРСКИЕ КОММАНДОС: 501-ЫЙ</h1>
+    <section id="section1">
+    <div class="book-content">
+      <div class="image-section">
+          <img src="../books/501.jpg" alt="Описание картинки" />
+      </div>
+      <div class="text-section">
+          <p>В ходе великого истребления джедаи были уничтожены, а Республика пала. Теперь бывшие республиканские коммандос - лучшие галактические солдаты, являющиеся клонами Джанго Фетта - оказываются по разные стороны баррикад и в разных доспехах. Дезертиры сбежали на Мандалор вместе с наёмниками и изгоями-джедаями, вошедшими в силы Кэла Скираты против имперской оккупации. Другие, в том числе и коммандос из «Дельты» с «Омегой», теперь служат в качестве имперских коммандос в спецподразделении 501-ого Легиона Вейдера, целью которого является охота и уничтожение джедаев и клонов-дезертиров.
+            Для Дармана, скорбящего об утрате жены и разлученном со своим сыном, это мучительное испытание на верность. Но он не единственный, кому предстоит пройти проверку узами братства. На Мандалоре, где клоны-дезертиры и сами жители планеты не испытывают любви к джедаям, необходимо поставить свои убеждения под сомнение. В новой, дикой эпохе галактического порядка старые распри, возможно, придётся отложить, чтобы объединиться перед более мощной угрозой, и никто отныне не может смириться с прежней преданностью.</p>
+          <div class="button-container">
+            <form action="https://libcat.ru/knigi/fantastika-i-fjentezi/boevaya-fantastika/129756-karen-treviss-imperskie-kommando-1-pyatsot-pervyj.html">
+              <button class="lngbtn">ЧИТАТЬ</button>
+            </form>
+            <form action="https://royallib.com/book/treviss_karen/imperskie_kommando__1__pyatsot_perviy.html?ysclid=m435cknp3o102147418">
+              <button class="lngbtn">СКАЧАТЬ</button>
+            </form>
+          </div>
+      </div>
+    </div>
+  </section>
+  <foter style="margin-bottom: 5vh;"></foter>
+</body>
+</html>

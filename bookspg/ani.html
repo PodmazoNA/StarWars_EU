@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<link rel="stylesheet" href="../star_style.css">
+<head>
+<style>
+    body{
+        background-color: rgb(22, 8, 52);
+    }
+    h1{
+      font-size: clamp(30px, 3.5vw, 60px);
+      text-align: center;
+      margin-bottom: -1vh;
+      color: yellow;
+    }
+</style>
+</head>
+
+<body>
+    <script>
+        let isDrawing = false;
+        let elements = [];
+        
+        document.addEventListener('dblclick', function(e) {
+          isDrawing = !isDrawing; // Переключаем состояние рисования
+          if (isDrawing) {
+            document.addEventListener('mousemove', drawElement);
+          } else {
+            document.removeEventListener('mousemove', drawElement);
+          }
+        });
+        
+        function drawElement(e) {
+          const element = document.createElement('div');
+          element.classList.add('draw-element');
+          element.style.left = e.pageX + 'px';
+          element.style.top = e.pageY + 'px';
+          document.body.appendChild(element);
+          elements.push(element);
+          setTimeout(() => {
+            element.classList.add('fade-out');
+            setTimeout(() => {
+              document.body.removeChild(element);
+          }, 500);
+          }, 3000);
+        }
+    </script>
+    <h1 id="manybooks">ЛАБИРИНТ ЗЛА</h1>
+    <section id="section1">
+    <div class="book-content">
+      <div class="image-section">
+          <img src="../books/ani.jpg" alt="Описание картинки" />
+      </div>
+      <div class="text-section">
+          <p>Война, начавшаяся в «Эпизоде II: Атака клонов», достигла точки кипения. Неудержимые войска сепаратистов атакуют расшатанную Республику, и дьявольский триумвират графа Дуку, генерала Гривуса и их повелителя Дарта Сидиуса четко отрабатывает стратегию завоевания. В «Эпизоде III: Месть ситхов» станет ясна судьба ключевых действующих лиц с обеих сторон. Но сейчас все фигуры этой шахматной партии расставлены на галактической доске перед решающей схваткой…
+            Получив задание захватить наместника Торговой Федерации и члена Совета сепаратистов Нута Ганрея, рыцари-джедаи Оби-Ван Кеноби и Энакин Скайуокер с отрядом клонов оказываются на Кейто-Неймодии. Союзники ситхов проявляют всю свою изворотливость и, рискуя жизнью, ускользают от преследователей-джедаев. И все же джедаям достается неожиданный трофей — уникальный голопередатчик, который позволяет республиканской разведке выйти на след неуловимого Дарта Сидиуса, готового поставить Республику на колени…</p>
+          <div class="button-container">
+            <form action="https://libcat.ru/knigi/fantastika-i-fjentezi/kiberpank/403524-dzhejms-lucheno-labirint-zla.html">
+              <button class="lngbtn">ЧИТАТЬ</button>
+            </form>
+            <form action="https://bookscafe.net/book/luseno_dzheyms-labirint_zla-88174.html?ysclid=m436vrlnd5826805437">
+              <button class="lngbtn">СКАЧАТЬ</button>
+            </form>
+          </div>
+      </div>
+    </div>
+  </section>
+  <foter style="margin-bottom: 5vh;"></foter>
+</body>
+</html>

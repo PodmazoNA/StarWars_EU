@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<link rel="stylesheet" href="../star_style.css">
+<head>
+<style>
+    body{
+        background-color: rgb(22, 8, 52);
+    }
+    h1{
+      font-size: clamp(30px, 3.5vw, 60px);
+      text-align: center;
+      margin-bottom: -1vh;
+      color: yellow;
+    }
+</style>
+</head>
+
+<body>
+    <script>
+        let isDrawing = false;
+        let elements = [];
+        
+        document.addEventListener('dblclick', function(e) {
+          isDrawing = !isDrawing; // Переключаем состояние рисования
+          if (isDrawing) {
+            document.addEventListener('mousemove', drawElement);
+          } else {
+            document.removeEventListener('mousemove', drawElement);
+          }
+        });
+        
+        function drawElement(e) {
+          const element = document.createElement('div');
+          element.classList.add('draw-element');
+          element.style.left = e.pageX + 'px';
+          element.style.top = e.pageY + 'px';
+          document.body.appendChild(element);
+          elements.push(element);
+          setTimeout(() => {
+            element.classList.add('fade-out');
+            setTimeout(() => {
+              document.body.removeChild(element);
+          }, 500);
+          }, 3000);
+        }
+    </script>
+    <h1 id="manybooks">ЙОДА: СВИДАНИЕ С ТЬМОЙ</h1>
+    <section id="section1">
+    <div class="book-content">
+      <div class="image-section">
+          <img src="../books/yoda.jpg" alt="Описание картинки" />
+      </div>
+      <div class="text-section">
+          <p>В разгар Войн Клонов мастер-джедай Йода вновь должен встретиться с одним из величайших своих противников — графом Дуку…
+            Яростные Войны клонов довели Республику до грани катастрофы. В ходе жестокой битвы одному из рыцарей-джедаев сохранили жизнь, чтобы он мог доставить на Корускант послание на имя Йоды. По-видимому, Дуку хочет мира и требует встречи. Маловероятно, что вероломный граф искренен, но на кону миллионы жизней, и у Йоды нет выбора.
+            Встреча состоится на планете Вжун, пропитанной темной стороной. Более трудной задачи нельзя и представить. Сможет ли Йода вернуть обратно своего некогда самого перспективного ученика, или граф Дуку обрушит на бывшего наставника свои темные силы? Так или иначе, Йода уверен в одном: эта битва станет одной из самых напряженных в его жизни.</p>
+          <div class="button-container">
+            <form action="https://libcat.ru/knigi/fantastika-i-fjentezi/boevaya-fantastika/292619-shon-styuart-joda-svidanie-s-tmoj.html">
+              <button class="lngbtn">ЧИТАТЬ</button>
+            </form>
+            <form action="https://bookscafe.net/book/styuart_shon-yoda_svidanie_s_tmoy-88172.html?ysclid=m4370pox7677017378">
+              <button class="lngbtn">СКАЧАТЬ</button>
+            </form>
+          </div>
+      </div>
+    </div>
+  </section>
+  <foter style="margin-bottom: 5vh;"></foter>
+</body>
+</html>

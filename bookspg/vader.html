@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<link rel="stylesheet" href="../star_style.css">
+<head>
+<style>
+    body{
+        background-color: rgb(22, 8, 52);
+    }
+    h1{
+      font-size: clamp(30px, 3.5vw, 60px);
+      text-align: center;
+      margin-bottom: -1vh;
+      color: yellow;
+    }
+</style>
+</head>
+
+<body>
+    <script>
+        let isDrawing = false;
+        let elements = [];
+        
+        document.addEventListener('dblclick', function(e) {
+          isDrawing = !isDrawing; // Переключаем состояние рисования
+          if (isDrawing) {
+            document.addEventListener('mousemove', drawElement);
+          } else {
+            document.removeEventListener('mousemove', drawElement);
+          }
+        });
+        
+        function drawElement(e) {
+          const element = document.createElement('div');
+          element.classList.add('draw-element');
+          element.style.left = e.pageX + 'px';
+          element.style.top = e.pageY + 'px';
+          document.body.appendChild(element);
+          elements.push(element);
+          setTimeout(() => {
+            element.classList.add('fade-out');
+            setTimeout(() => {
+              document.body.removeChild(element);
+          }, 500);
+          }, 3000);
+        }
+    </script>
+    <h1 id="manybooks">ТЕМНЫЙ ПОВЕЛИТЕЛЬ: ВОСХОД ДАРТА ВЕЙДЕРА</h1>
+    <section id="section1">
+    <div class="book-content">
+      <div class="image-section">
+          <img src="../books/vader.jpg" alt="Описание картинки" />
+      </div>
+      <div class="text-section">
+          <p>Для всей Галактики Энакин Скайуокер погиб на Корусанте. В некоторой степени это правда. Из кипящей лавы Мустафара поднялся жуткий черный призрак, некогда самый могучий рыцарь в истории Ордена джедаев, а ныне - ученик темной стороны, ужасный повелитель ситхов, карающая десница Императора. Обманутый, доведенный до безумия и в конце концов уничтоженный манипуляциями темного повелителя Сидиуса, Энакин Скайуокер умер... но Дарт Вейдер продолжает жить.
+            А тем временем чудом выжившие в день свершения Приказа 66 джедаи превращаются в беспомощную дичь, на которую объявлена охота по всей Галактике. Но самую большую опасность для них представляют не клоны, превратившиеся в штурмовиков, и даже не Император, а стремительный и смертоносный алый клинок Дарта Вейдера, ищущий утоления для разбитого сердца и отравленной души своего владельца.</p>
+          <div class="button-container">
+            <form action="https://libcat.ru/knigi/fantastika-i-fjentezi/kosmicheskaya-fantastika/403794-dzhejms-lucheno-temnyj-povelitel-voshod-darta-vejdera.html">
+              <button class="lngbtn">ЧИТАТЬ</button>
+            </form>
+            <form action="https://bookscafe.net/book/lucheno_dzheyms-povelitel_tmy_vozvyshenie_darta_veydera-70672.html?ysclid=m43550iecq216204635">
+              <button class="lngbtn">СКАЧАТЬ</button>
+            </form>
+          </div>
+      </div>
+    </div>
+  </section>
+  <foter style="margin-bottom: 5vh;"></foter>
+</body>
+</html>

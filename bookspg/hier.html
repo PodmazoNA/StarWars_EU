@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<link rel="stylesheet" href="../star_style.css">
+<head>
+<style>
+    body{
+        background-color: rgb(22, 8, 52);
+    }
+    h1{
+      font-size: clamp(30px, 3.5vw, 60px);
+      text-align: center;
+      margin-bottom: -1vh;
+      color: yellow;
+    }
+</style>
+</head>
+
+<body>
+    <script>
+        let isDrawing = false;
+        let elements = [];
+        
+        document.addEventListener('dblclick', function(e) {
+          isDrawing = !isDrawing; // Переключаем состояние рисования
+          if (isDrawing) {
+            document.addEventListener('mousemove', drawElement);
+          } else {
+            document.removeEventListener('mousemove', drawElement);
+          }
+        });
+        
+        function drawElement(e) {
+          const element = document.createElement('div');
+          element.classList.add('draw-element');
+          element.style.left = e.pageX + 'px';
+          element.style.top = e.pageY + 'px';
+          document.body.appendChild(element);
+          elements.push(element);
+          setTimeout(() => {
+            element.classList.add('fade-out');
+            setTimeout(() => {
+              document.body.removeChild(element);
+          }, 500);
+          }, 3000);
+        }
+    </script>
+    <h1 id="manybooks">ТРИЛОГИЯ ТРАУНА</h1>
+    <section id="section1">
+    <div class="book-content">
+      <div class="image-section">
+          <img src="../books/hier.jpg" alt="Описание картинки" />
+      </div>
+      <div class="text-section">
+          <h2>НАСЛЕДНИК ИМПЕРИИ</h2>
+          <p>Прошло пять лет после того, как погибла вторая Звезда Смерти. Дарт Вейдер уничтожил Императора, а остатки Империи оказались загнанными в далёкие уголки Галактики. Легендарный адмирал Акбар, отказавшись от политических дрязг, выходит в отставку. Мало кто предполагал, что отставка Акбара является следствием грандиозной интриги, затеянной последним из имперских военачальников, который за многие тысячи световых лет от Корусанта собирает под свое командование разрозненные корабли, готовясь к войне. Ибо этот флотоводец намерен уничтожить все, за что сражался Альянс… И противостоять ему смогут лишь ветераны Звёздных войн.
+
+              Генерал Хан Соло и сенатор Лея Органа, командир Разбойной эскадрильи Ведж Антиллес и охотник за информацией Тэлон Каррде против гранд-адмирала Империи Трауна…</p>
+          <div class="button-container">
+            <form action="https://libcat.ru/knigi/fantastika-i-fjentezi/boevaya-fantastika/21052-154-timoti-zan-trilogiya-trauna-1-naslednik-imperii.html">
+              <button class="lngbtn">ЧИТАТЬ</button>
+            </form>
+            <form action="https://bookscafe.net/book/zan_timoti-trilogiya_trauna_1_naslednik_imperii-84130.html">
+              <button class="lngbtn">СКАЧАТЬ</button>
+            </form>
+          </div>
+      </div>
+    </div>
+  </section>
+<section id="section2">
+    <div id="right-book" class="book-content">
+      <div class="image-section">
+        <img src="../books/dark.jpg" alt="Описание картинки" />
+    </div>
+    <div class="text-section">
+        <h2>ВОЗРОЖДЕНИЕ ТЬМЫ</h2>
+        <p>Cамый хитрый и безжалостный военачальник умирающей Империи — гранд-адмирал Траун — принял командование остатками имперского флота и начал наступление на позиции Новой Республики. С помощью оружия невообразимой мощи, некогда спрятанного Императором на дальней планете, Траун планирует переломить ход битвы, и установить свою власть в Галактике. Тем временем, Хан Соло и Ландо Калриссиан ведут гонку со временем, обнаружив доказательства измены внутри Республиканского Совета — и призрачный флот кораблей, способных принести гибель их друзьям и победу врагам. Но все эти опасности меркнут, когда появляется новый темный джедай, восставший из пепла, погруженный в прошлое, исполненный горечи … и желания склонить Люка Скайуокера к темной стороне Силы.</p>
+        <div class="button-container">
+          <form action="https://libcat.ru/knigi/fantastika-i-fjentezi/boevaya-fantastika/21051-timoti-zan-trilogiya-trauna-2-temnoe-voinstvo.html">
+            <button class="lngbtn">ЧИТАТЬ</button>
+          </form>
+          <form action="https://bookscafe.net/book/zan_timoti-trilogiya_trauna_2_temnoe_voinstvo-84131.html">
+            <button class="lngbtn">СКАЧАТЬ</button>
+          </form>
+        </div>
+    </div>
+    </div>
+  </section>
+  <section id="section3">
+    <div class="book-content">
+      <div class="image-section">
+        <img src="../books/lastorder.jpg" alt="Описание картинки" />
+    </div>
+    <div class="text-section">
+        <h2>ПОСЛЕДНИЙ ПРИКАЗ</h2>
+        <p>Девять лет прошло после битвы на Явине. Солдатам Новой Республики едва удается сдерживать продвижение имперских войск под командованием гранд-адмирала Трауна. Солдаты клоны, созданные в тайной лаборатории Императора, теснят силы Альянса. Пока Траун готовится к последнему решительному нападению, охотник за информацией Тэлон Каррде старается сплотить контрабандистов, призывая их выступить против Империи.
+
+          Новая Республика формирует диверсионную группу, которая должна уничтожить клонирующие установки. Люк Скайуокер, Хан и Лея Соло, Мара Джейд, Тэлон Каррде отправляются на далекий Вейланд, в недра горы Тантисс. Но здесь их поджидает чудовищная опасность — легендарный тёмный джедай.</p>
+        <div class="button-container">
+          <form action="https://libcat.ru/knigi/fantastika-i-fjentezi/boevaya-fantastika/21050-timoti-zan-trilogiya-trauna-3-poslednij-prikaz.html">
+            <button class="lngbtn">ЧИТАТЬ</button>
+          </form>
+          <form action="https://bookscafe.net/book/zan_timoti-trilogiya_trauna_3_posledniy_prikaz-84132.html">
+            <button class="lngbtn">СКАЧАТЬ</button>
+          </form>
+        </div>
+    </div>
+    </div>
+  </section>
+  <foter style="margin-bottom: 5vh;"></foter>
+</body>
+</html>
